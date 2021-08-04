@@ -1,0 +1,38 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+../include/frame.hpp
+
+../include/inspirehand.hpp
+memory
+-
+array
+-
+iostream
+-
+serialport.hpp
+../include/serialport.hpp
+frame.hpp
+../include/frame.hpp
+boost/assign.hpp
+-
+boost/progress.hpp
+-
+
+../include/serialport.hpp
+boost/asio.hpp
+-
+
+/home/abc418/桌面/inspireHand/src/test2.cpp
+inspirehand.hpp
+/home/abc418/桌面/inspireHand/src/inspirehand.hpp
+thread
+-
+unistd.h
+-
+

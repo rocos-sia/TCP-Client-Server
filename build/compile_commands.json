@@ -1,0 +1,12 @@
+[
+{
+  "directory": "/home/abc418/桌面/inspireHand/build",
+  "command": "/usr/bin/x86_64-linux-gnu-g++-7   -I/home/abc418/桌面/inspireHand/build -I/home/abc418/桌面/inspireHand -I/home/abc418/桌面/inspireHand/include  -g   -std=gnu++11 -o CMakeFiles/test1.dir/src/test1.cpp.o -c /home/abc418/桌面/inspireHand/src/test1.cpp",
+  "file": "/home/abc418/桌面/inspireHand/src/test1.cpp"
+},
+{
+  "directory": "/home/abc418/桌面/inspireHand/build",
+  "command": "/usr/bin/x86_64-linux-gnu-g++-7   -I/home/abc418/桌面/inspireHand/build -I/home/abc418/桌面/inspireHand -I/home/abc418/桌面/inspireHand/include  -g   -std=gnu++11 -o CMakeFiles/test2.dir/src/test2.cpp.o -c /home/abc418/桌面/inspireHand/src/test2.cpp",
+  "file": "/home/abc418/桌面/inspireHand/src/test2.cpp"
+}
+]

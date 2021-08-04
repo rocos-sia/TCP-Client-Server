@@ -1,0 +1,6 @@
+/home/abc418/桌面/inspireHand/build/CMakeFiles/rebuild_cache.dir
+/home/abc418/桌面/inspireHand/build/CMakeFiles/edit_cache.dir
+/home/abc418/桌面/inspireHand/build/CMakeFiles/test1.dir
+/home/abc418/桌面/inspireHand/build/CMakeFiles/package_source.dir
+/home/abc418/桌面/inspireHand/build/CMakeFiles/package.dir
+/home/abc418/桌面/inspireHand/build/CMakeFiles/test2.dir
