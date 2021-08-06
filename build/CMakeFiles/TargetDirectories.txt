@@ -1,6 +1,7 @@
-/home/abc418/桌面/inspireHand/build/CMakeFiles/rebuild_cache.dir
-/home/abc418/桌面/inspireHand/build/CMakeFiles/edit_cache.dir
-/home/abc418/桌面/inspireHand/build/CMakeFiles/test1.dir
-/home/abc418/桌面/inspireHand/build/CMakeFiles/package_source.dir
-/home/abc418/桌面/inspireHand/build/CMakeFiles/package.dir
-/home/abc418/桌面/inspireHand/build/CMakeFiles/test2.dir
+/home/abc418/桌面/C++_exsamples/build/CMakeFiles/rebuild_cache.dir
+/home/abc418/桌面/C++_exsamples/build/CMakeFiles/write.dir
+/home/abc418/桌面/C++_exsamples/build/CMakeFiles/share_memory.dir
+/home/abc418/桌面/C++_exsamples/build/CMakeFiles/read.dir
+/home/abc418/桌面/C++_exsamples/build/CMakeFiles/test__.dir
+/home/abc418/桌面/C++_exsamples/build/CMakeFiles/atomic.dir
+/home/abc418/桌面/C++_exsamples/build/CMakeFiles/edit_cache.dir

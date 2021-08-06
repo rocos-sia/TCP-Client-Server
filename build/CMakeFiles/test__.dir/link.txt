@@ -1,0 +1,1 @@
+/usr/bin/x86_64-linux-gnu-g++-7  -g   CMakeFiles/test__.dir/src/test__.cpp.o  -o ../bin/test__ /usr/lib/x86_64-linux-gnu/libboost_system.so -lpthread -lrt 

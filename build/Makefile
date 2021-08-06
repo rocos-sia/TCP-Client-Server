@@ -48,10 +48,10 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/abc418/桌面/inspireHand
+CMAKE_SOURCE_DIR = /home/abc418/桌面/C++_exsamples
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/abc418/桌面/inspireHand/build
+CMAKE_BINARY_DIR = /home/abc418/桌面/C++_exsamples/build
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -78,33 +78,11 @@ edit_cache/fast: edit_cache
 
 .PHONY : edit_cache/fast
 
-# Special rule for the target package_source
-package_source:
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Run CPack packaging tool for source..."
-	/usr/bin/cpack --config ./CPackSourceConfig.cmake /home/abc418/桌面/inspireHand/build/CPackSourceConfig.cmake
-.PHONY : package_source
-
-# Special rule for the target package_source
-package_source/fast: package_source
-
-.PHONY : package_source/fast
-
-# Special rule for the target package
-package: preinstall
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Run CPack packaging tool..."
-	/usr/bin/cpack --config ./CPackConfig.cmake
-.PHONY : package
-
-# Special rule for the target package
-package/fast: package
-
-.PHONY : package/fast
-
 # The main all target
 all: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/abc418/桌面/inspireHand/build/CMakeFiles /home/abc418/桌面/inspireHand/build/CMakeFiles/progress.marks
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/abc418/桌面/C++_exsamples/build/CMakeFiles /home/abc418/桌面/C++_exsamples/build/CMakeFiles/progress.marks
 	$(MAKE) -f CMakeFiles/Makefile2 all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/abc418/桌面/inspireHand/build/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/abc418/桌面/C++_exsamples/build/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
@@ -133,84 +111,204 @@ depend:
 .PHONY : depend
 
 #=============================================================================
-# Target rules for targets named test1
+# Target rules for targets named write
 
 # Build rule for target.
-test1: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 test1
-.PHONY : test1
+write: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 write
+.PHONY : write
 
 # fast build rule for target.
-test1/fast:
-	$(MAKE) -f CMakeFiles/test1.dir/build.make CMakeFiles/test1.dir/build
-.PHONY : test1/fast
+write/fast:
+	$(MAKE) -f CMakeFiles/write.dir/build.make CMakeFiles/write.dir/build
+.PHONY : write/fast
 
 #=============================================================================
-# Target rules for targets named test2
+# Target rules for targets named share_memory
 
 # Build rule for target.
-test2: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 test2
-.PHONY : test2
+share_memory: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 share_memory
+.PHONY : share_memory
 
 # fast build rule for target.
-test2/fast:
-	$(MAKE) -f CMakeFiles/test2.dir/build.make CMakeFiles/test2.dir/build
-.PHONY : test2/fast
+share_memory/fast:
+	$(MAKE) -f CMakeFiles/share_memory.dir/build.make CMakeFiles/share_memory.dir/build
+.PHONY : share_memory/fast
 
-src/test1.o: src/test1.cpp.o
+#=============================================================================
+# Target rules for targets named read
 
-.PHONY : src/test1.o
+# Build rule for target.
+read: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 read
+.PHONY : read
+
+# fast build rule for target.
+read/fast:
+	$(MAKE) -f CMakeFiles/read.dir/build.make CMakeFiles/read.dir/build
+.PHONY : read/fast
+
+#=============================================================================
+# Target rules for targets named test__
+
+# Build rule for target.
+test__: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 test__
+.PHONY : test__
+
+# fast build rule for target.
+test__/fast:
+	$(MAKE) -f CMakeFiles/test__.dir/build.make CMakeFiles/test__.dir/build
+.PHONY : test__/fast
+
+#=============================================================================
+# Target rules for targets named atomic
+
+# Build rule for target.
+atomic: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 atomic
+.PHONY : atomic
+
+# fast build rule for target.
+atomic/fast:
+	$(MAKE) -f CMakeFiles/atomic.dir/build.make CMakeFiles/atomic.dir/build
+.PHONY : atomic/fast
+
+src/atomic.o: src/atomic.cpp.o
+
+.PHONY : src/atomic.o
 
 # target to build an object file
-src/test1.cpp.o:
-	$(MAKE) -f CMakeFiles/test1.dir/build.make CMakeFiles/test1.dir/src/test1.cpp.o
-.PHONY : src/test1.cpp.o
+src/atomic.cpp.o:
+	$(MAKE) -f CMakeFiles/atomic.dir/build.make CMakeFiles/atomic.dir/src/atomic.cpp.o
+.PHONY : src/atomic.cpp.o
 
-src/test1.i: src/test1.cpp.i
+src/atomic.i: src/atomic.cpp.i
 
-.PHONY : src/test1.i
+.PHONY : src/atomic.i
 
 # target to preprocess a source file
-src/test1.cpp.i:
-	$(MAKE) -f CMakeFiles/test1.dir/build.make CMakeFiles/test1.dir/src/test1.cpp.i
-.PHONY : src/test1.cpp.i
+src/atomic.cpp.i:
+	$(MAKE) -f CMakeFiles/atomic.dir/build.make CMakeFiles/atomic.dir/src/atomic.cpp.i
+.PHONY : src/atomic.cpp.i
 
-src/test1.s: src/test1.cpp.s
+src/atomic.s: src/atomic.cpp.s
 
-.PHONY : src/test1.s
+.PHONY : src/atomic.s
 
 # target to generate assembly for a file
-src/test1.cpp.s:
-	$(MAKE) -f CMakeFiles/test1.dir/build.make CMakeFiles/test1.dir/src/test1.cpp.s
-.PHONY : src/test1.cpp.s
+src/atomic.cpp.s:
+	$(MAKE) -f CMakeFiles/atomic.dir/build.make CMakeFiles/atomic.dir/src/atomic.cpp.s
+.PHONY : src/atomic.cpp.s
 
-src/test2.o: src/test2.cpp.o
+src/read.o: src/read.cpp.o
 
-.PHONY : src/test2.o
+.PHONY : src/read.o
 
 # target to build an object file
-src/test2.cpp.o:
-	$(MAKE) -f CMakeFiles/test2.dir/build.make CMakeFiles/test2.dir/src/test2.cpp.o
-.PHONY : src/test2.cpp.o
+src/read.cpp.o:
+	$(MAKE) -f CMakeFiles/read.dir/build.make CMakeFiles/read.dir/src/read.cpp.o
+.PHONY : src/read.cpp.o
 
-src/test2.i: src/test2.cpp.i
+src/read.i: src/read.cpp.i
 
-.PHONY : src/test2.i
+.PHONY : src/read.i
 
 # target to preprocess a source file
-src/test2.cpp.i:
-	$(MAKE) -f CMakeFiles/test2.dir/build.make CMakeFiles/test2.dir/src/test2.cpp.i
-.PHONY : src/test2.cpp.i
+src/read.cpp.i:
+	$(MAKE) -f CMakeFiles/read.dir/build.make CMakeFiles/read.dir/src/read.cpp.i
+.PHONY : src/read.cpp.i
 
-src/test2.s: src/test2.cpp.s
+src/read.s: src/read.cpp.s
 
-.PHONY : src/test2.s
+.PHONY : src/read.s
 
 # target to generate assembly for a file
-src/test2.cpp.s:
-	$(MAKE) -f CMakeFiles/test2.dir/build.make CMakeFiles/test2.dir/src/test2.cpp.s
-.PHONY : src/test2.cpp.s
+src/read.cpp.s:
+	$(MAKE) -f CMakeFiles/read.dir/build.make CMakeFiles/read.dir/src/read.cpp.s
+.PHONY : src/read.cpp.s
+
+src/share_memory.o: src/share_memory.cpp.o
+
+.PHONY : src/share_memory.o
+
+# target to build an object file
+src/share_memory.cpp.o:
+	$(MAKE) -f CMakeFiles/share_memory.dir/build.make CMakeFiles/share_memory.dir/src/share_memory.cpp.o
+.PHONY : src/share_memory.cpp.o
+
+src/share_memory.i: src/share_memory.cpp.i
+
+.PHONY : src/share_memory.i
+
+# target to preprocess a source file
+src/share_memory.cpp.i:
+	$(MAKE) -f CMakeFiles/share_memory.dir/build.make CMakeFiles/share_memory.dir/src/share_memory.cpp.i
+.PHONY : src/share_memory.cpp.i
+
+src/share_memory.s: src/share_memory.cpp.s
+
+.PHONY : src/share_memory.s
+
+# target to generate assembly for a file
+src/share_memory.cpp.s:
+	$(MAKE) -f CMakeFiles/share_memory.dir/build.make CMakeFiles/share_memory.dir/src/share_memory.cpp.s
+.PHONY : src/share_memory.cpp.s
+
+src/test__.o: src/test__.cpp.o
+
+.PHONY : src/test__.o
+
+# target to build an object file
+src/test__.cpp.o:
+	$(MAKE) -f CMakeFiles/test__.dir/build.make CMakeFiles/test__.dir/src/test__.cpp.o
+.PHONY : src/test__.cpp.o
+
+src/test__.i: src/test__.cpp.i
+
+.PHONY : src/test__.i
+
+# target to preprocess a source file
+src/test__.cpp.i:
+	$(MAKE) -f CMakeFiles/test__.dir/build.make CMakeFiles/test__.dir/src/test__.cpp.i
+.PHONY : src/test__.cpp.i
+
+src/test__.s: src/test__.cpp.s
+
+.PHONY : src/test__.s
+
+# target to generate assembly for a file
+src/test__.cpp.s:
+	$(MAKE) -f CMakeFiles/test__.dir/build.make CMakeFiles/test__.dir/src/test__.cpp.s
+.PHONY : src/test__.cpp.s
+
+src/write.o: src/write.cpp.o
+
+.PHONY : src/write.o
+
+# target to build an object file
+src/write.cpp.o:
+	$(MAKE) -f CMakeFiles/write.dir/build.make CMakeFiles/write.dir/src/write.cpp.o
+.PHONY : src/write.cpp.o
+
+src/write.i: src/write.cpp.i
+
+.PHONY : src/write.i
+
+# target to preprocess a source file
+src/write.cpp.i:
+	$(MAKE) -f CMakeFiles/write.dir/build.make CMakeFiles/write.dir/src/write.cpp.i
+.PHONY : src/write.cpp.i
+
+src/write.s: src/write.cpp.s
+
+.PHONY : src/write.s
+
+# target to generate assembly for a file
+src/write.cpp.s:
+	$(MAKE) -f CMakeFiles/write.dir/build.make CMakeFiles/write.dir/src/write.cpp.s
+.PHONY : src/write.cpp.s
 
 # Help Target
 help:
@@ -219,17 +317,27 @@ help:
 	@echo "... clean"
 	@echo "... depend"
 	@echo "... rebuild_cache"
+	@echo "... write"
+	@echo "... share_memory"
+	@echo "... read"
+	@echo "... test__"
+	@echo "... atomic"
 	@echo "... edit_cache"
-	@echo "... test1"
-	@echo "... package_source"
-	@echo "... package"
-	@echo "... test2"
-	@echo "... src/test1.o"
-	@echo "... src/test1.i"
-	@echo "... src/test1.s"
-	@echo "... src/test2.o"
-	@echo "... src/test2.i"
-	@echo "... src/test2.s"
+	@echo "... src/atomic.o"
+	@echo "... src/atomic.i"
+	@echo "... src/atomic.s"
+	@echo "... src/read.o"
+	@echo "... src/read.i"
+	@echo "... src/read.s"
+	@echo "... src/share_memory.o"
+	@echo "... src/share_memory.i"
+	@echo "... src/share_memory.s"
+	@echo "... src/test__.o"
+	@echo "... src/test__.i"
+	@echo "... src/test__.s"
+	@echo "... src/write.o"
+	@echo "... src/write.i"
+	@echo "... src/write.s"
 .PHONY : help
 
 

@@ -1,1 +1,0 @@
-/usr/bin/x86_64-linux-gnu-g++-7  -g   CMakeFiles/test1.dir/src/test1.cpp.o  -o ../bin/test1 /usr/lib/x86_64-linux-gnu/libboost_system.so 

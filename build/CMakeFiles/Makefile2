@@ -54,82 +54,193 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/abc418/桌面/inspireHand
+CMAKE_SOURCE_DIR = /home/abc418/桌面/C++_exsamples
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/abc418/桌面/inspireHand/build
+CMAKE_BINARY_DIR = /home/abc418/桌面/C++_exsamples/build
 
 #=============================================================================
-# Target rules for target CMakeFiles/test1.dir
+# Target rules for target CMakeFiles/write.dir
 
 # All Build rule for target.
-CMakeFiles/test1.dir/all:
-	$(MAKE) -f CMakeFiles/test1.dir/build.make CMakeFiles/test1.dir/depend
-	$(MAKE) -f CMakeFiles/test1.dir/build.make CMakeFiles/test1.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/abc418/桌面/inspireHand/build/CMakeFiles --progress-num=1,2 "Built target test1"
-.PHONY : CMakeFiles/test1.dir/all
+CMakeFiles/write.dir/all:
+	$(MAKE) -f CMakeFiles/write.dir/build.make CMakeFiles/write.dir/depend
+	$(MAKE) -f CMakeFiles/write.dir/build.make CMakeFiles/write.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/abc418/桌面/C++_exsamples/build/CMakeFiles --progress-num=9,10 "Built target write"
+.PHONY : CMakeFiles/write.dir/all
 
 # Include target in all.
-all: CMakeFiles/test1.dir/all
+all: CMakeFiles/write.dir/all
 
 .PHONY : all
 
 # Build rule for subdir invocation for target.
-CMakeFiles/test1.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/abc418/桌面/inspireHand/build/CMakeFiles 2
-	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/test1.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/abc418/桌面/inspireHand/build/CMakeFiles 0
-.PHONY : CMakeFiles/test1.dir/rule
+CMakeFiles/write.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/abc418/桌面/C++_exsamples/build/CMakeFiles 2
+	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/write.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/abc418/桌面/C++_exsamples/build/CMakeFiles 0
+.PHONY : CMakeFiles/write.dir/rule
 
 # Convenience name for target.
-test1: CMakeFiles/test1.dir/rule
+write: CMakeFiles/write.dir/rule
 
-.PHONY : test1
-
-# clean rule for target.
-CMakeFiles/test1.dir/clean:
-	$(MAKE) -f CMakeFiles/test1.dir/build.make CMakeFiles/test1.dir/clean
-.PHONY : CMakeFiles/test1.dir/clean
+.PHONY : write
 
 # clean rule for target.
-clean: CMakeFiles/test1.dir/clean
+CMakeFiles/write.dir/clean:
+	$(MAKE) -f CMakeFiles/write.dir/build.make CMakeFiles/write.dir/clean
+.PHONY : CMakeFiles/write.dir/clean
+
+# clean rule for target.
+clean: CMakeFiles/write.dir/clean
 
 .PHONY : clean
 
 #=============================================================================
-# Target rules for target CMakeFiles/test2.dir
+# Target rules for target CMakeFiles/share_memory.dir
 
 # All Build rule for target.
-CMakeFiles/test2.dir/all:
-	$(MAKE) -f CMakeFiles/test2.dir/build.make CMakeFiles/test2.dir/depend
-	$(MAKE) -f CMakeFiles/test2.dir/build.make CMakeFiles/test2.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/abc418/桌面/inspireHand/build/CMakeFiles --progress-num=3,4 "Built target test2"
-.PHONY : CMakeFiles/test2.dir/all
+CMakeFiles/share_memory.dir/all:
+	$(MAKE) -f CMakeFiles/share_memory.dir/build.make CMakeFiles/share_memory.dir/depend
+	$(MAKE) -f CMakeFiles/share_memory.dir/build.make CMakeFiles/share_memory.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/abc418/桌面/C++_exsamples/build/CMakeFiles --progress-num=5,6 "Built target share_memory"
+.PHONY : CMakeFiles/share_memory.dir/all
 
 # Include target in all.
-all: CMakeFiles/test2.dir/all
+all: CMakeFiles/share_memory.dir/all
 
 .PHONY : all
 
 # Build rule for subdir invocation for target.
-CMakeFiles/test2.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/abc418/桌面/inspireHand/build/CMakeFiles 2
-	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/test2.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/abc418/桌面/inspireHand/build/CMakeFiles 0
-.PHONY : CMakeFiles/test2.dir/rule
+CMakeFiles/share_memory.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/abc418/桌面/C++_exsamples/build/CMakeFiles 2
+	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/share_memory.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/abc418/桌面/C++_exsamples/build/CMakeFiles 0
+.PHONY : CMakeFiles/share_memory.dir/rule
 
 # Convenience name for target.
-test2: CMakeFiles/test2.dir/rule
+share_memory: CMakeFiles/share_memory.dir/rule
 
-.PHONY : test2
-
-# clean rule for target.
-CMakeFiles/test2.dir/clean:
-	$(MAKE) -f CMakeFiles/test2.dir/build.make CMakeFiles/test2.dir/clean
-.PHONY : CMakeFiles/test2.dir/clean
+.PHONY : share_memory
 
 # clean rule for target.
-clean: CMakeFiles/test2.dir/clean
+CMakeFiles/share_memory.dir/clean:
+	$(MAKE) -f CMakeFiles/share_memory.dir/build.make CMakeFiles/share_memory.dir/clean
+.PHONY : CMakeFiles/share_memory.dir/clean
+
+# clean rule for target.
+clean: CMakeFiles/share_memory.dir/clean
+
+.PHONY : clean
+
+#=============================================================================
+# Target rules for target CMakeFiles/read.dir
+
+# All Build rule for target.
+CMakeFiles/read.dir/all:
+	$(MAKE) -f CMakeFiles/read.dir/build.make CMakeFiles/read.dir/depend
+	$(MAKE) -f CMakeFiles/read.dir/build.make CMakeFiles/read.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/abc418/桌面/C++_exsamples/build/CMakeFiles --progress-num=3,4 "Built target read"
+.PHONY : CMakeFiles/read.dir/all
+
+# Include target in all.
+all: CMakeFiles/read.dir/all
+
+.PHONY : all
+
+# Build rule for subdir invocation for target.
+CMakeFiles/read.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/abc418/桌面/C++_exsamples/build/CMakeFiles 2
+	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/read.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/abc418/桌面/C++_exsamples/build/CMakeFiles 0
+.PHONY : CMakeFiles/read.dir/rule
+
+# Convenience name for target.
+read: CMakeFiles/read.dir/rule
+
+.PHONY : read
+
+# clean rule for target.
+CMakeFiles/read.dir/clean:
+	$(MAKE) -f CMakeFiles/read.dir/build.make CMakeFiles/read.dir/clean
+.PHONY : CMakeFiles/read.dir/clean
+
+# clean rule for target.
+clean: CMakeFiles/read.dir/clean
+
+.PHONY : clean
+
+#=============================================================================
+# Target rules for target CMakeFiles/test__.dir
+
+# All Build rule for target.
+CMakeFiles/test__.dir/all:
+	$(MAKE) -f CMakeFiles/test__.dir/build.make CMakeFiles/test__.dir/depend
+	$(MAKE) -f CMakeFiles/test__.dir/build.make CMakeFiles/test__.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/abc418/桌面/C++_exsamples/build/CMakeFiles --progress-num=7,8 "Built target test__"
+.PHONY : CMakeFiles/test__.dir/all
+
+# Include target in all.
+all: CMakeFiles/test__.dir/all
+
+.PHONY : all
+
+# Build rule for subdir invocation for target.
+CMakeFiles/test__.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/abc418/桌面/C++_exsamples/build/CMakeFiles 2
+	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/test__.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/abc418/桌面/C++_exsamples/build/CMakeFiles 0
+.PHONY : CMakeFiles/test__.dir/rule
+
+# Convenience name for target.
+test__: CMakeFiles/test__.dir/rule
+
+.PHONY : test__
+
+# clean rule for target.
+CMakeFiles/test__.dir/clean:
+	$(MAKE) -f CMakeFiles/test__.dir/build.make CMakeFiles/test__.dir/clean
+.PHONY : CMakeFiles/test__.dir/clean
+
+# clean rule for target.
+clean: CMakeFiles/test__.dir/clean
+
+.PHONY : clean
+
+#=============================================================================
+# Target rules for target CMakeFiles/atomic.dir
+
+# All Build rule for target.
+CMakeFiles/atomic.dir/all:
+	$(MAKE) -f CMakeFiles/atomic.dir/build.make CMakeFiles/atomic.dir/depend
+	$(MAKE) -f CMakeFiles/atomic.dir/build.make CMakeFiles/atomic.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/abc418/桌面/C++_exsamples/build/CMakeFiles --progress-num=1,2 "Built target atomic"
+.PHONY : CMakeFiles/atomic.dir/all
+
+# Include target in all.
+all: CMakeFiles/atomic.dir/all
+
+.PHONY : all
+
+# Build rule for subdir invocation for target.
+CMakeFiles/atomic.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/abc418/桌面/C++_exsamples/build/CMakeFiles 2
+	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/atomic.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/abc418/桌面/C++_exsamples/build/CMakeFiles 0
+.PHONY : CMakeFiles/atomic.dir/rule
+
+# Convenience name for target.
+atomic: CMakeFiles/atomic.dir/rule
+
+.PHONY : atomic
+
+# clean rule for target.
+CMakeFiles/atomic.dir/clean:
+	$(MAKE) -f CMakeFiles/atomic.dir/build.make CMakeFiles/atomic.dir/clean
+.PHONY : CMakeFiles/atomic.dir/clean
+
+# clean rule for target.
+clean: CMakeFiles/atomic.dir/clean
 
 .PHONY : clean
 
