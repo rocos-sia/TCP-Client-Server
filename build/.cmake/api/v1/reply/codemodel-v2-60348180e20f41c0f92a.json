@@ -1,0 +1,95 @@
+{
+	"configurations" : 
+	[
+		{
+			"directories" : 
+			[
+				{
+					"build" : ".",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.10"
+					},
+					"projectIndex" : 0,
+					"source" : ".",
+					"targetIndexes" : 
+					[
+						0,
+						1,
+						2,
+						3,
+						4
+					]
+				}
+			],
+			"name" : "Debug",
+			"projects" : 
+			[
+				{
+					"directoryIndexes" : 
+					[
+						0
+					],
+					"name" : "C++",
+					"targetIndexes" : 
+					[
+						0,
+						1,
+						2,
+						3,
+						4
+					]
+				}
+			],
+			"targets" : 
+			[
+				{
+					"directoryIndex" : 0,
+					"id" : "atomic::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-atomic-Debug-f358adb57d60df9d7828.json",
+					"name" : "atomic",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "atomic_test::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-atomic_test-Debug-4d15b254d83dabb2bfca.json",
+					"name" : "atomic_test",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "read::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-read-Debug-6708cfe1991fc74444f5.json",
+					"name" : "read",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "share_memory::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-share_memory-Debug-5391c30d4a52b110c2f7.json",
+					"name" : "share_memory",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "write::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-write-Debug-307e774f95c99ee49bdc.json",
+					"name" : "write",
+					"projectIndex" : 0
+				}
+			]
+		}
+	],
+	"kind" : "codemodel",
+	"paths" : 
+	{
+		"build" : "/home/abc418/cpp_examples/build",
+		"source" : "/home/abc418/cpp_examples"
+	},
+	"version" : 
+	{
+		"major" : 2,
+		"minor" : 0
+	}
+}

@@ -1,16 +1,27 @@
-#include <sys/types.h>
-#include <sys/stat.h>
-#include <fcntl.h>
-#include <sys/mman.h>
-#include <unistd.h>
+/**
+ * @file atomic.cpp
+ * @author your name (you@domain.com)
+ * @brief 
+ * @version 0.1
+ * @date 2021-09-11
+ * 
+ * @copyright Copyright (c) 2021
+ * 
+ * 
+ */
 #include <atomic>
-#include <thread>
-#include <condition_variable>
-#include <iostream>
 #include <chrono>
+#include <condition_variable>
+#include <fcntl.h>
+#include <iostream>
 #include <stdlib.h>
-#include <sys/syscall.h>
 #include <string.h>
+#include <sys/mman.h>
+#include <sys/stat.h>
+#include <sys/syscall.h>
+#include <sys/types.h>
+#include <thread>
+#include <unistd.h>
 
 using namespace std;
 using std::chrono::high_resolution_clock;

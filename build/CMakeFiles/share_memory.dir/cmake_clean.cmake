@@ -1,7 +1,7 @@
 file(REMOVE_RECURSE
-  "CMakeFiles/share_memory.dir/src/share_memory.cpp.o"
-  "../bin/share_memory.pdb"
   "../bin/share_memory"
+  "../bin/share_memory.pdb"
+  "CMakeFiles/share_memory.dir/src/share_memory.cpp.o"
 )
 
 # Per-language clean rules from dependency scanning.

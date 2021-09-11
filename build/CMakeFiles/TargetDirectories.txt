@@ -1,7 +1,7 @@
-/home/abc418/桌面/C++_exsamples/build/CMakeFiles/rebuild_cache.dir
-/home/abc418/桌面/C++_exsamples/build/CMakeFiles/write.dir
-/home/abc418/桌面/C++_exsamples/build/CMakeFiles/share_memory.dir
-/home/abc418/桌面/C++_exsamples/build/CMakeFiles/read.dir
-/home/abc418/桌面/C++_exsamples/build/CMakeFiles/test__.dir
-/home/abc418/桌面/C++_exsamples/build/CMakeFiles/atomic.dir
-/home/abc418/桌面/C++_exsamples/build/CMakeFiles/edit_cache.dir
+/home/abc418/cpp_examples/build/CMakeFiles/rebuild_cache.dir
+/home/abc418/cpp_examples/build/CMakeFiles/edit_cache.dir
+/home/abc418/cpp_examples/build/CMakeFiles/atomic_test.dir
+/home/abc418/cpp_examples/build/CMakeFiles/share_memory.dir
+/home/abc418/cpp_examples/build/CMakeFiles/read.dir
+/home/abc418/cpp_examples/build/CMakeFiles/atomic.dir
+/home/abc418/cpp_examples/build/CMakeFiles/write.dir
