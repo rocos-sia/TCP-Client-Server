@@ -1,0 +1,20 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/abc418/cpp_examples/src/allocator.cpp
+alloca.h
+-
+iostream
+-
+memory
+-
+string
+-
+vector
+-
+

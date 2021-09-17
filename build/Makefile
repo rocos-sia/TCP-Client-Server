@@ -111,6 +111,19 @@ depend:
 .PHONY : depend
 
 #=============================================================================
+# Target rules for targets named allocator
+
+# Build rule for target.
+allocator: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 allocator
+.PHONY : allocator
+
+# fast build rule for target.
+allocator/fast:
+	$(MAKE) -f CMakeFiles/allocator.dir/build.make CMakeFiles/allocator.dir/build
+.PHONY : allocator/fast
+
+#=============================================================================
 # Target rules for targets named atomic_test
 
 # Build rule for target.
@@ -174,6 +187,33 @@ write: cmake_check_build_system
 write/fast:
 	$(MAKE) -f CMakeFiles/write.dir/build.make CMakeFiles/write.dir/build
 .PHONY : write/fast
+
+src/allocator.o: src/allocator.cpp.o
+
+.PHONY : src/allocator.o
+
+# target to build an object file
+src/allocator.cpp.o:
+	$(MAKE) -f CMakeFiles/allocator.dir/build.make CMakeFiles/allocator.dir/src/allocator.cpp.o
+.PHONY : src/allocator.cpp.o
+
+src/allocator.i: src/allocator.cpp.i
+
+.PHONY : src/allocator.i
+
+# target to preprocess a source file
+src/allocator.cpp.i:
+	$(MAKE) -f CMakeFiles/allocator.dir/build.make CMakeFiles/allocator.dir/src/allocator.cpp.i
+.PHONY : src/allocator.cpp.i
+
+src/allocator.s: src/allocator.cpp.s
+
+.PHONY : src/allocator.s
+
+# target to generate assembly for a file
+src/allocator.cpp.s:
+	$(MAKE) -f CMakeFiles/allocator.dir/build.make CMakeFiles/allocator.dir/src/allocator.cpp.s
+.PHONY : src/allocator.cpp.s
 
 src/atomic.o: src/atomic.cpp.o
 
@@ -318,11 +358,15 @@ help:
 	@echo "... depend"
 	@echo "... rebuild_cache"
 	@echo "... edit_cache"
+	@echo "... allocator"
 	@echo "... atomic_test"
 	@echo "... share_memory"
 	@echo "... read"
 	@echo "... atomic"
 	@echo "... write"
+	@echo "... src/allocator.o"
+	@echo "... src/allocator.i"
+	@echo "... src/allocator.s"
 	@echo "... src/atomic.o"
 	@echo "... src/atomic.i"
 	@echo "... src/atomic.s"

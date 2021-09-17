@@ -1,0 +1,28 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/abc418/cpp_examples/src/share_memory.cpp
+condition_variable
+-
+fcntl.h
+-
+iostream
+-
+mutex
+-
+sys/mman.h
+-
+sys/stat.h
+-
+sys/types.h
+-
+thread
+-
+unistd.h
+-
+

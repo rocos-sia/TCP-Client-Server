@@ -1,14 +1,4 @@
-/**
- * @file atomic.cpp
- * @author your name (you@domain.com)
- * @brief 
- * @version 0.1
- * @date 2021-09-11
- * 
- * @copyright Copyright (c) 2021
- * 
- * 
- */
+
 #include <atomic>
 #include <chrono>
 #include <condition_variable>
@@ -22,6 +12,11 @@
 #include <sys/types.h>
 #include <thread>
 #include <unistd.h>
+
+/**
+ * @brief 总结 使用atomic变量实现共享内存的互斥读写
+ * 
+ */
 
 using namespace std;
 using std::chrono::high_resolution_clock;

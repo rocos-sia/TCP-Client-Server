@@ -7,6 +7,12 @@
 #include <sys/types.h>
 #include <thread>
 #include <unistd.h>
+
+/**
+ * @brief 总结 实现线程之间的共享内存读写
+ * 
+ */
+
 std::mutex mut;
 bool ready = false;
 std::condition_variable cond;

@@ -1,0 +1,1 @@
+/bin/x86_64-linux-gnu-g++-9  -g   CMakeFiles/allocator.dir/src/allocator.cpp.o  -o ../bin/allocator  /usr/lib/x86_64-linux-gnu/libboost_system.so.1.71.0 -lpthread -lrt 

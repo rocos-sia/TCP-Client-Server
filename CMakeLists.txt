@@ -39,3 +39,10 @@ add_executable(atomic_test  src/atomic_test.cpp)
 target_link_libraries(atomic_test ${Boost_LIBRARIES})
 target_link_libraries(atomic_test pthread)
 target_link_libraries(atomic_test rt)
+
+add_executable(allocator  src/allocator.cpp)
+target_link_libraries(allocator ${Boost_LIBRARIES})
+target_link_libraries(allocator pthread)
+target_link_libraries(allocator rt)
+
+

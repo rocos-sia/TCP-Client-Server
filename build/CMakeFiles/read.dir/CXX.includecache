@@ -1,0 +1,26 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/abc418/cpp_examples/src/read.cpp
+stdio.h
+-
+stdlib.h
+-
+sys/mman.h
+-
+string.h
+-
+fcntl.h
+-
+sys/stat.h
+-
+sys/types.h
+-
+unistd.h
+-
+

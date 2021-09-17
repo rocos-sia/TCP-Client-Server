@@ -1,6 +1,11 @@
 [
 {
   "directory": "/home/abc418/cpp_examples/build",
+  "command": "/bin/x86_64-linux-gnu-g++-9  -DBOOST_ALL_NO_LIB -DBOOST_SYSTEM_DYN_LINK -I/home/abc418/cpp_examples/build -I/home/abc418/cpp_examples -I/home/abc418/cpp_examples/include  -g   -std=gnu++11 -o CMakeFiles/allocator.dir/src/allocator.cpp.o -c /home/abc418/cpp_examples/src/allocator.cpp",
+  "file": "/home/abc418/cpp_examples/src/allocator.cpp"
+},
+{
+  "directory": "/home/abc418/cpp_examples/build",
   "command": "/bin/x86_64-linux-gnu-g++-9  -DBOOST_ALL_NO_LIB -DBOOST_SYSTEM_DYN_LINK -I/home/abc418/cpp_examples/build -I/home/abc418/cpp_examples -I/home/abc418/cpp_examples/include  -g   -std=gnu++11 -o CMakeFiles/atomic_test.dir/src/atomic_test.cpp.o -c /home/abc418/cpp_examples/src/atomic_test.cpp",
   "file": "/home/abc418/cpp_examples/src/atomic_test.cpp"
 },

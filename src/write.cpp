@@ -1,12 +1,15 @@
-#include <stdio.h>
-#include <sys/types.h>
-#include <sys/stat.h>
+#include <errno.h>
 #include <fcntl.h>
 #include <stdio.h>
-#include <sys/mman.h>
 #include <string.h>
-#include <errno.h>
+#include <sys/mman.h>
+#include <sys/stat.h>
+#include <sys/types.h>
 #include <unistd.h>
+/**
+ * @brief 总结 实现进程间共享内存的读写
+ * 
+ */
 
 #define MMAP_DATA_SIZE 1024
 

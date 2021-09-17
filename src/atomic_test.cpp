@@ -1,11 +1,15 @@
-#include <iostream> // std::cout
 #include <atomic>   // std::atomic, std::atomic_flag, ATOMIC_FLAG_INIT
+#include <iostream> // std::cout
 #include <thread>   // std::thread, std::this_thread::yield
 #include <vector>   // std::vector
+/**
+ * @brief 结论 atomic 只保证操作原子性，不保证顺序
+ * 
+ * 
+ */
 
-// 由 false 初始化一个 std::atomic<bool> 类型的原子变量
-std::atomic<bool> ready(false);
-std::atomic_flag winner = ATOMIC_FLAG_INIT;
+std::atomic<bool> ready(false);             // 由 false 初始化一个 std::atomic<bool> 类型的原子变量
+std::atomic_flag winner = ATOMIC_FLAG_INIT; //atomic 自带的bool类型，特点未设置返回false并且设置、设置过返回true
 
 void do_count1m(int id)
 {
