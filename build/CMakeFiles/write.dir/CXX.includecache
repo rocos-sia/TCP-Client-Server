@@ -7,21 +7,19 @@
 #IncludeRegexTransform: 
 
 /home/abc418/cpp_examples/src/write.cpp
-stdio.h
--
-sys/types.h
--
-sys/stat.h
+errno.h
 -
 fcntl.h
 -
 stdio.h
 -
-sys/mman.h
--
 string.h
 -
-errno.h
+sys/mman.h
+-
+sys/stat.h
+-
+sys/types.h
 -
 unistd.h
 -

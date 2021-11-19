@@ -1,85 +1,42 @@
-
-#include <atomic>
-#include <chrono>
-#include <condition_variable>
-#include <fcntl.h>
-#include <iostream>
-#include <stdlib.h>
-#include <string.h>
-#include <sys/mman.h>
-#include <sys/stat.h>
-#include <sys/syscall.h>
-#include <sys/types.h>
-#include <thread>
-#include <unistd.h>
-
+#include <atomic>    // std::atomic, std::atomic_flag, ATOMIC_FLAG_INIT
+#include <iostream>  // std::cout
+#include <thread>    // std::thread, std::this_thread::yield
+#include <vector>    // std::vector
 /**
- * @brief 总结 使用atomic变量实现共享内存的互斥读写
+ * @brief 结论 atomic 变量只保证操作原子性，不保证顺序，适合双发竞争同一个资源
+ * 
  * 
  */
 
-using namespace std;
-using std::chrono::high_resolution_clock;
-using std::chrono::milliseconds;
+std::atomic<bool> ready(false);               // 由 false 初始化一个 std::atomic<bool> 类型的原子变量
+std::atomic_flag  winner = ATOMIC_FLAG_INIT;  //atomic 自带的bool类型，特点未设置返回false并且设置、设置过返回true
 
-std::atomic<bool> readyFlag(false);
-char *data;
-
-void write_thread(const int &count)
+void do_count1m(int id)
 {
-    for (int i = 0; i < count; i++)
+    while (!ready)
     {
-        while (readyFlag.load())
-            std::this_thread::yield();
-        sprintf(data, "my share memary data is %d", i);
-        readyFlag.store(true);
+        // std::this_thread::yield();
+    }  // 等待 ready 变为 true.
+
+    // for (volatile int i = 0; i < 1000000; ++i)
+    // {
+    // } // 计数
+
+    if (!winner.test_and_set())
+    {
+        std::cout << "thread #" << id << " won!\n";
     }
 }
 
-void read_thread(const int &count)
+int main()
 {
-    for (int i = 0; i < count; i++)
-    {
-        while (!readyFlag.load())
-            std::this_thread::yield();
-        puts(data);
-        readyFlag.store(false);
-    }
-}
+    std::vector<std::thread> threads;
+    std::cout << "spawning 10 threads that count to 1 million...\n";
+    for (int i = 1; i <= 8; ++i)
+        threads.push_back(std::thread(do_count1m, i));
+    ready = true;
 
-int main(int argc, char const *argv[])
-{
-    pid_t pid = syscall(SYS_gettid);
-
-    char *buff = new char[100];
-    memset(buff, 0, 100);
-    sprintf(buff, "chrt  -a   -r   --pid  %d   %d", 99, pid);
-    int var = system(buff);
-    if (var == -1 || var == 127)
-    {
-        std::cerr << "system call failed";
-        return -1;
-    };
-    delete[] buff;
-
-    high_resolution_clock::time_point beginTime = high_resolution_clock::now();
-
-    data = (char *)mmap(NULL, 1024, PROT_READ | PROT_WRITE, MAP_SHARED | MAP_ANONYMOUS, -1, 0);
-    if (!data)
-    {
-        printf("mmap failed\n");
-        munmap(data, 1024);
-    }
-
-    std::thread th_write(write_thread, 20);
-    std::thread th_read(read_thread, 20);
-
-    th_write.join();
-    th_read.join();
-
-    high_resolution_clock::time_point endTime = high_resolution_clock::now();
-    auto timeInterval = std::chrono::duration_cast<std::chrono::nanoseconds>(endTime - beginTime);
-    cout << "Running Time：" << (double)timeInterval.count() / 1000.0 << "us" << endl;
-
+    for (auto& th : threads)
+        th.join();
     return 0;
 }

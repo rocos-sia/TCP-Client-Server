@@ -2,7 +2,7 @@
 	"artifacts" : 
 	[
 		{
-			"path" : "/home/abc418/cpp_examples/bin/atomic_test"
+			"path" : "/home/abc418/cpp_examples/bin/write"
 		}
 	],
 	"backtrace" : 1,
@@ -26,19 +26,19 @@
 			{
 				"command" : 0,
 				"file" : 0,
-				"line" : 38,
+				"line" : 17,
 				"parent" : 0
 			},
 			{
 				"command" : 1,
 				"file" : 0,
-				"line" : 39,
+				"line" : 18,
 				"parent" : 0
 			},
 			{
 				"command" : 2,
 				"file" : 0,
-				"line" : 12,
+				"line" : 13,
 				"parent" : 0
 			}
 		]
@@ -52,7 +52,7 @@
 					"fragment" : "-g  "
 				},
 				{
-					"fragment" : "-std=gnu++11"
+					"fragment" : "-std=gnu++2a"
 				}
 			],
 			"defines" : 
@@ -86,7 +86,7 @@
 			]
 		}
 	],
-	"id" : "atomic_test::@6890427a1f51a3e7e1df",
+	"id" : "write::@6890427a1f51a3e7e1df",
 	"link" : 
 	{
 		"commandFragments" : 
@@ -115,8 +115,8 @@
 		],
 		"language" : "CXX"
 	},
-	"name" : "atomic_test",
-	"nameOnDisk" : "atomic_test",
+	"name" : "write",
+	"nameOnDisk" : "write",
 	"paths" : 
 	{
 		"build" : ".",
@@ -137,7 +137,7 @@
 		{
 			"backtrace" : 1,
 			"compileGroupIndex" : 0,
-			"path" : "src/atomic_test.cpp",
+			"path" : "src/write.cpp",
 			"sourceGroupIndex" : 0
 		}
 	],

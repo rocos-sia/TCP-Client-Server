@@ -1,32 +1,47 @@
 [
 {
   "directory": "/home/abc418/cpp_examples/build",
-  "command": "/bin/x86_64-linux-gnu-g++-9  -DBOOST_ALL_NO_LIB -DBOOST_SYSTEM_DYN_LINK -I/home/abc418/cpp_examples/build -I/home/abc418/cpp_examples -I/home/abc418/cpp_examples/include  -g   -std=gnu++11 -o CMakeFiles/allocator.dir/src/allocator.cpp.o -c /home/abc418/cpp_examples/src/allocator.cpp",
+  "command": "/bin/x86_64-linux-gnu-g++-9  -DBOOST_ALL_NO_LIB -DBOOST_SYSTEM_DYN_LINK -I/home/abc418/cpp_examples/build -I/home/abc418/cpp_examples -I/home/abc418/cpp_examples/include  -g   -std=gnu++2a -o CMakeFiles/share_ptr.dir/src/share_ptr.cpp.o -c /home/abc418/cpp_examples/src/share_ptr.cpp",
+  "file": "/home/abc418/cpp_examples/src/share_ptr.cpp"
+},
+{
+  "directory": "/home/abc418/cpp_examples/build",
+  "command": "/bin/x86_64-linux-gnu-g++-9  -DBOOST_ALL_NO_LIB -DBOOST_SYSTEM_DYN_LINK -I/home/abc418/cpp_examples/build -I/home/abc418/cpp_examples -I/home/abc418/cpp_examples/include  -g   -std=gnu++2a -o CMakeFiles/construct.dir/src/construct.cpp.o -c /home/abc418/cpp_examples/src/construct.cpp",
+  "file": "/home/abc418/cpp_examples/src/construct.cpp"
+},
+{
+  "directory": "/home/abc418/cpp_examples/build",
+  "command": "/bin/x86_64-linux-gnu-g++-9  -DBOOST_ALL_NO_LIB -DBOOST_SYSTEM_DYN_LINK -I/home/abc418/cpp_examples/build -I/home/abc418/cpp_examples -I/home/abc418/cpp_examples/include  -g   -std=gnu++2a -o CMakeFiles/test.dir/src/test.cpp.o -c /home/abc418/cpp_examples/src/test.cpp",
+  "file": "/home/abc418/cpp_examples/src/test.cpp"
+},
+{
+  "directory": "/home/abc418/cpp_examples/build",
+  "command": "/bin/x86_64-linux-gnu-g++-9  -DBOOST_ALL_NO_LIB -DBOOST_SYSTEM_DYN_LINK -I/home/abc418/cpp_examples/build -I/home/abc418/cpp_examples -I/home/abc418/cpp_examples/include  -g   -std=gnu++2a -o CMakeFiles/allocator.dir/src/allocator.cpp.o -c /home/abc418/cpp_examples/src/allocator.cpp",
   "file": "/home/abc418/cpp_examples/src/allocator.cpp"
 },
 {
   "directory": "/home/abc418/cpp_examples/build",
-  "command": "/bin/x86_64-linux-gnu-g++-9  -DBOOST_ALL_NO_LIB -DBOOST_SYSTEM_DYN_LINK -I/home/abc418/cpp_examples/build -I/home/abc418/cpp_examples -I/home/abc418/cpp_examples/include  -g   -std=gnu++11 -o CMakeFiles/atomic_test.dir/src/atomic_test.cpp.o -c /home/abc418/cpp_examples/src/atomic_test.cpp",
-  "file": "/home/abc418/cpp_examples/src/atomic_test.cpp"
-},
-{
-  "directory": "/home/abc418/cpp_examples/build",
-  "command": "/bin/x86_64-linux-gnu-g++-9  -DBOOST_ALL_NO_LIB -DBOOST_SYSTEM_DYN_LINK -I/home/abc418/cpp_examples/build -I/home/abc418/cpp_examples -I/home/abc418/cpp_examples/include  -g   -std=gnu++11 -o CMakeFiles/share_memory.dir/src/share_memory.cpp.o -c /home/abc418/cpp_examples/src/share_memory.cpp",
-  "file": "/home/abc418/cpp_examples/src/share_memory.cpp"
-},
-{
-  "directory": "/home/abc418/cpp_examples/build",
-  "command": "/bin/x86_64-linux-gnu-g++-9  -DBOOST_ALL_NO_LIB -DBOOST_SYSTEM_DYN_LINK -I/home/abc418/cpp_examples/build -I/home/abc418/cpp_examples -I/home/abc418/cpp_examples/include  -g   -std=gnu++11 -o CMakeFiles/read.dir/src/read.cpp.o -c /home/abc418/cpp_examples/src/read.cpp",
-  "file": "/home/abc418/cpp_examples/src/read.cpp"
-},
-{
-  "directory": "/home/abc418/cpp_examples/build",
-  "command": "/bin/x86_64-linux-gnu-g++-9  -DBOOST_ALL_NO_LIB -DBOOST_SYSTEM_DYN_LINK -I/home/abc418/cpp_examples/build -I/home/abc418/cpp_examples -I/home/abc418/cpp_examples/include  -g   -std=gnu++11 -o CMakeFiles/atomic.dir/src/atomic.cpp.o -c /home/abc418/cpp_examples/src/atomic.cpp",
+  "command": "/bin/x86_64-linux-gnu-g++-9  -DBOOST_ALL_NO_LIB -DBOOST_SYSTEM_DYN_LINK -I/home/abc418/cpp_examples/build -I/home/abc418/cpp_examples -I/home/abc418/cpp_examples/include  -g   -std=gnu++2a -o CMakeFiles/atomic_test.dir/src/atomic.cpp.o -c /home/abc418/cpp_examples/src/atomic.cpp",
   "file": "/home/abc418/cpp_examples/src/atomic.cpp"
 },
 {
   "directory": "/home/abc418/cpp_examples/build",
-  "command": "/bin/x86_64-linux-gnu-g++-9  -DBOOST_ALL_NO_LIB -DBOOST_SYSTEM_DYN_LINK -I/home/abc418/cpp_examples/build -I/home/abc418/cpp_examples -I/home/abc418/cpp_examples/include  -g   -std=gnu++11 -o CMakeFiles/write.dir/src/write.cpp.o -c /home/abc418/cpp_examples/src/write.cpp",
+  "command": "/bin/x86_64-linux-gnu-g++-9  -DBOOST_ALL_NO_LIB -DBOOST_SYSTEM_DYN_LINK -I/home/abc418/cpp_examples/build -I/home/abc418/cpp_examples -I/home/abc418/cpp_examples/include  -g   -std=gnu++2a -o CMakeFiles/share_memory.dir/src/share_memory_atomic.cpp.o -c /home/abc418/cpp_examples/src/share_memory_atomic.cpp",
+  "file": "/home/abc418/cpp_examples/src/share_memory_atomic.cpp"
+},
+{
+  "directory": "/home/abc418/cpp_examples/build",
+  "command": "/bin/x86_64-linux-gnu-g++-9  -DBOOST_ALL_NO_LIB -DBOOST_SYSTEM_DYN_LINK -I/home/abc418/cpp_examples/build -I/home/abc418/cpp_examples -I/home/abc418/cpp_examples/include  -g   -std=gnu++2a -o CMakeFiles/read.dir/src/read.cpp.o -c /home/abc418/cpp_examples/src/read.cpp",
+  "file": "/home/abc418/cpp_examples/src/read.cpp"
+},
+{
+  "directory": "/home/abc418/cpp_examples/build",
+  "command": "/bin/x86_64-linux-gnu-g++-9  -DBOOST_ALL_NO_LIB -DBOOST_SYSTEM_DYN_LINK -I/home/abc418/cpp_examples/build -I/home/abc418/cpp_examples -I/home/abc418/cpp_examples/include  -g   -std=gnu++2a -o CMakeFiles/atomic.dir/src/atomic.cpp.o -c /home/abc418/cpp_examples/src/atomic.cpp",
+  "file": "/home/abc418/cpp_examples/src/atomic.cpp"
+},
+{
+  "directory": "/home/abc418/cpp_examples/build",
+  "command": "/bin/x86_64-linux-gnu-g++-9  -DBOOST_ALL_NO_LIB -DBOOST_SYSTEM_DYN_LINK -I/home/abc418/cpp_examples/build -I/home/abc418/cpp_examples -I/home/abc418/cpp_examples/include  -g   -std=gnu++2a -o CMakeFiles/write.dir/src/write.cpp.o -c /home/abc418/cpp_examples/src/write.cpp",
   "file": "/home/abc418/cpp_examples/src/write.cpp"
 }
 ]

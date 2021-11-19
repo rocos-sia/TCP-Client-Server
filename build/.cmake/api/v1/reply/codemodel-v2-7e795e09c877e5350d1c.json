@@ -19,7 +19,10 @@
 						2,
 						3,
 						4,
-						5
+						5,
+						6,
+						7,
+						8
 					]
 				}
 			],
@@ -39,7 +42,10 @@
 						2,
 						3,
 						4,
-						5
+						5,
+						6,
+						7,
+						8
 					]
 				}
 			],
@@ -48,42 +54,63 @@
 				{
 					"directoryIndex" : 0,
 					"id" : "allocator::@6890427a1f51a3e7e1df",
-					"jsonFile" : "target-allocator-Debug-d0493dbbfdf2bc5b3fed.json",
+					"jsonFile" : "target-allocator-Debug-75794cc589d28f72c8a8.json",
 					"name" : "allocator",
 					"projectIndex" : 0
 				},
 				{
 					"directoryIndex" : 0,
 					"id" : "atomic::@6890427a1f51a3e7e1df",
-					"jsonFile" : "target-atomic-Debug-f358adb57d60df9d7828.json",
+					"jsonFile" : "target-atomic-Debug-16459a378dfc39b5a5f0.json",
 					"name" : "atomic",
 					"projectIndex" : 0
 				},
 				{
 					"directoryIndex" : 0,
 					"id" : "atomic_test::@6890427a1f51a3e7e1df",
-					"jsonFile" : "target-atomic_test-Debug-4d15b254d83dabb2bfca.json",
+					"jsonFile" : "target-atomic_test-Debug-68d4075905afd3d913a1.json",
 					"name" : "atomic_test",
 					"projectIndex" : 0
 				},
 				{
 					"directoryIndex" : 0,
+					"id" : "construct::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-construct-Debug-29f0487ac4787b953010.json",
+					"name" : "construct",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
 					"id" : "read::@6890427a1f51a3e7e1df",
-					"jsonFile" : "target-read-Debug-6708cfe1991fc74444f5.json",
+					"jsonFile" : "target-read-Debug-9c96f1cae4be539c7b40.json",
 					"name" : "read",
 					"projectIndex" : 0
 				},
 				{
 					"directoryIndex" : 0,
 					"id" : "share_memory::@6890427a1f51a3e7e1df",
-					"jsonFile" : "target-share_memory-Debug-5391c30d4a52b110c2f7.json",
+					"jsonFile" : "target-share_memory-Debug-b5bbf0a753d9f335bfaf.json",
 					"name" : "share_memory",
 					"projectIndex" : 0
 				},
 				{
 					"directoryIndex" : 0,
+					"id" : "share_ptr::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-share_ptr-Debug-1c19b01453c72ec3e088.json",
+					"name" : "share_ptr",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "test::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-test-Debug-bd21b09a2b6644bf7f61.json",
+					"name" : "test",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
 					"id" : "write::@6890427a1f51a3e7e1df",
-					"jsonFile" : "target-write-Debug-307e774f95c99ee49bdc.json",
+					"jsonFile" : "target-write-Debug-320700b24bca799466be.json",
 					"name" : "write",
 					"projectIndex" : 0
 				}

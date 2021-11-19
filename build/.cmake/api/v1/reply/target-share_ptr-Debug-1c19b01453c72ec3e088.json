@@ -2,7 +2,7 @@
 	"artifacts" : 
 	[
 		{
-			"path" : "/home/abc418/cpp_examples/bin/write"
+			"path" : "/home/abc418/cpp_examples/bin/share_ptr"
 		}
 	],
 	"backtrace" : 1,
@@ -26,19 +26,19 @@
 			{
 				"command" : 0,
 				"file" : 0,
-				"line" : 16,
+				"line" : 63,
 				"parent" : 0
 			},
 			{
 				"command" : 1,
 				"file" : 0,
-				"line" : 17,
+				"line" : 64,
 				"parent" : 0
 			},
 			{
 				"command" : 2,
 				"file" : 0,
-				"line" : 12,
+				"line" : 13,
 				"parent" : 0
 			}
 		]
@@ -52,7 +52,7 @@
 					"fragment" : "-g  "
 				},
 				{
-					"fragment" : "-std=gnu++11"
+					"fragment" : "-std=gnu++2a"
 				}
 			],
 			"defines" : 
@@ -86,7 +86,7 @@
 			]
 		}
 	],
-	"id" : "write::@6890427a1f51a3e7e1df",
+	"id" : "share_ptr::@6890427a1f51a3e7e1df",
 	"link" : 
 	{
 		"commandFragments" : 
@@ -115,8 +115,8 @@
 		],
 		"language" : "CXX"
 	},
-	"name" : "write",
-	"nameOnDisk" : "write",
+	"name" : "share_ptr",
+	"nameOnDisk" : "share_ptr",
 	"paths" : 
 	{
 		"build" : ".",
@@ -137,7 +137,7 @@
 		{
 			"backtrace" : 1,
 			"compileGroupIndex" : 0,
-			"path" : "src/write.cpp",
+			"path" : "src/share_ptr.cpp",
 			"sourceGroupIndex" : 0
 		}
 	],

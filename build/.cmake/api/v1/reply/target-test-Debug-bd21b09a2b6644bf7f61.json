@@ -2,7 +2,7 @@
 	"artifacts" : 
 	[
 		{
-			"path" : "/home/abc418/cpp_examples/bin/share_memory"
+			"path" : "/home/abc418/cpp_examples/bin/test"
 		}
 	],
 	"backtrace" : 1,
@@ -26,19 +26,19 @@
 			{
 				"command" : 0,
 				"file" : 0,
-				"line" : 27,
+				"line" : 51,
 				"parent" : 0
 			},
 			{
 				"command" : 1,
 				"file" : 0,
-				"line" : 28,
+				"line" : 52,
 				"parent" : 0
 			},
 			{
 				"command" : 2,
 				"file" : 0,
-				"line" : 12,
+				"line" : 13,
 				"parent" : 0
 			}
 		]
@@ -52,7 +52,7 @@
 					"fragment" : "-g  "
 				},
 				{
-					"fragment" : "-std=gnu++11"
+					"fragment" : "-std=gnu++2a"
 				}
 			],
 			"defines" : 
@@ -86,7 +86,7 @@
 			]
 		}
 	],
-	"id" : "share_memory::@6890427a1f51a3e7e1df",
+	"id" : "test::@6890427a1f51a3e7e1df",
 	"link" : 
 	{
 		"commandFragments" : 
@@ -115,8 +115,8 @@
 		],
 		"language" : "CXX"
 	},
-	"name" : "share_memory",
-	"nameOnDisk" : "share_memory",
+	"name" : "test",
+	"nameOnDisk" : "test",
 	"paths" : 
 	{
 		"build" : ".",
@@ -137,7 +137,7 @@
 		{
 			"backtrace" : 1,
 			"compileGroupIndex" : 0,
-			"path" : "src/share_memory.cpp",
+			"path" : "src/test.cpp",
 			"sourceGroupIndex" : 0
 		}
 	],

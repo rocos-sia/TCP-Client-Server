@@ -57,27 +57,27 @@ include CMakeFiles/atomic_test.dir/progress.make
 # Include the compile flags for this target's objects.
 include CMakeFiles/atomic_test.dir/flags.make
 
-CMakeFiles/atomic_test.dir/src/atomic_test.cpp.o: CMakeFiles/atomic_test.dir/flags.make
-CMakeFiles/atomic_test.dir/src/atomic_test.cpp.o: ../src/atomic_test.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/abc418/cpp_examples/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/atomic_test.dir/src/atomic_test.cpp.o"
-	/bin/x86_64-linux-gnu-g++-9  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/atomic_test.dir/src/atomic_test.cpp.o -c /home/abc418/cpp_examples/src/atomic_test.cpp
+CMakeFiles/atomic_test.dir/src/atomic.cpp.o: CMakeFiles/atomic_test.dir/flags.make
+CMakeFiles/atomic_test.dir/src/atomic.cpp.o: ../src/atomic.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/abc418/cpp_examples/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/atomic_test.dir/src/atomic.cpp.o"
+	/bin/x86_64-linux-gnu-g++-9  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/atomic_test.dir/src/atomic.cpp.o -c /home/abc418/cpp_examples/src/atomic.cpp
 
-CMakeFiles/atomic_test.dir/src/atomic_test.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/atomic_test.dir/src/atomic_test.cpp.i"
-	/bin/x86_64-linux-gnu-g++-9 $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/abc418/cpp_examples/src/atomic_test.cpp > CMakeFiles/atomic_test.dir/src/atomic_test.cpp.i
+CMakeFiles/atomic_test.dir/src/atomic.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/atomic_test.dir/src/atomic.cpp.i"
+	/bin/x86_64-linux-gnu-g++-9 $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/abc418/cpp_examples/src/atomic.cpp > CMakeFiles/atomic_test.dir/src/atomic.cpp.i
 
-CMakeFiles/atomic_test.dir/src/atomic_test.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/atomic_test.dir/src/atomic_test.cpp.s"
-	/bin/x86_64-linux-gnu-g++-9 $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/abc418/cpp_examples/src/atomic_test.cpp -o CMakeFiles/atomic_test.dir/src/atomic_test.cpp.s
+CMakeFiles/atomic_test.dir/src/atomic.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/atomic_test.dir/src/atomic.cpp.s"
+	/bin/x86_64-linux-gnu-g++-9 $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/abc418/cpp_examples/src/atomic.cpp -o CMakeFiles/atomic_test.dir/src/atomic.cpp.s
 
 # Object files for target atomic_test
 atomic_test_OBJECTS = \
-"CMakeFiles/atomic_test.dir/src/atomic_test.cpp.o"
+"CMakeFiles/atomic_test.dir/src/atomic.cpp.o"
 
 # External object files for target atomic_test
 atomic_test_EXTERNAL_OBJECTS =
 
-../bin/atomic_test: CMakeFiles/atomic_test.dir/src/atomic_test.cpp.o
+../bin/atomic_test: CMakeFiles/atomic_test.dir/src/atomic.cpp.o
 ../bin/atomic_test: CMakeFiles/atomic_test.dir/build.make
 ../bin/atomic_test: /usr/lib/x86_64-linux-gnu/libboost_system.so.1.71.0
 ../bin/atomic_test: CMakeFiles/atomic_test.dir/link.txt

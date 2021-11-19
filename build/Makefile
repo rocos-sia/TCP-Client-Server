@@ -69,8 +69,8 @@ rebuild_cache/fast: rebuild_cache
 
 # Special rule for the target edit_cache
 edit_cache:
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "No interactive CMake dialog available..."
-	/usr/bin/cmake -E echo No\ interactive\ CMake\ dialog\ available.
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running CMake cache editor..."
+	/usr/bin/cmake-gui -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
 .PHONY : edit_cache
 
 # Special rule for the target edit_cache
@@ -109,6 +109,45 @@ preinstall/fast:
 depend:
 	$(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
 .PHONY : depend
+
+#=============================================================================
+# Target rules for targets named share_ptr
+
+# Build rule for target.
+share_ptr: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 share_ptr
+.PHONY : share_ptr
+
+# fast build rule for target.
+share_ptr/fast:
+	$(MAKE) -f CMakeFiles/share_ptr.dir/build.make CMakeFiles/share_ptr.dir/build
+.PHONY : share_ptr/fast
+
+#=============================================================================
+# Target rules for targets named construct
+
+# Build rule for target.
+construct: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 construct
+.PHONY : construct
+
+# fast build rule for target.
+construct/fast:
+	$(MAKE) -f CMakeFiles/construct.dir/build.make CMakeFiles/construct.dir/build
+.PHONY : construct/fast
+
+#=============================================================================
+# Target rules for targets named test
+
+# Build rule for target.
+test: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 test
+.PHONY : test
+
+# fast build rule for target.
+test/fast:
+	$(MAKE) -f CMakeFiles/test.dir/build.make CMakeFiles/test.dir/build
+.PHONY : test/fast
 
 #=============================================================================
 # Target rules for targets named allocator
@@ -221,6 +260,7 @@ src/atomic.o: src/atomic.cpp.o
 
 # target to build an object file
 src/atomic.cpp.o:
+	$(MAKE) -f CMakeFiles/atomic_test.dir/build.make CMakeFiles/atomic_test.dir/src/atomic.cpp.o
 	$(MAKE) -f CMakeFiles/atomic.dir/build.make CMakeFiles/atomic.dir/src/atomic.cpp.o
 .PHONY : src/atomic.cpp.o
 
@@ -230,6 +270,7 @@ src/atomic.i: src/atomic.cpp.i
 
 # target to preprocess a source file
 src/atomic.cpp.i:
+	$(MAKE) -f CMakeFiles/atomic_test.dir/build.make CMakeFiles/atomic_test.dir/src/atomic.cpp.i
 	$(MAKE) -f CMakeFiles/atomic.dir/build.make CMakeFiles/atomic.dir/src/atomic.cpp.i
 .PHONY : src/atomic.cpp.i
 
@@ -239,35 +280,36 @@ src/atomic.s: src/atomic.cpp.s
 
 # target to generate assembly for a file
 src/atomic.cpp.s:
+	$(MAKE) -f CMakeFiles/atomic_test.dir/build.make CMakeFiles/atomic_test.dir/src/atomic.cpp.s
 	$(MAKE) -f CMakeFiles/atomic.dir/build.make CMakeFiles/atomic.dir/src/atomic.cpp.s
 .PHONY : src/atomic.cpp.s
 
-src/atomic_test.o: src/atomic_test.cpp.o
+src/construct.o: src/construct.cpp.o
 
-.PHONY : src/atomic_test.o
+.PHONY : src/construct.o
 
 # target to build an object file
-src/atomic_test.cpp.o:
-	$(MAKE) -f CMakeFiles/atomic_test.dir/build.make CMakeFiles/atomic_test.dir/src/atomic_test.cpp.o
-.PHONY : src/atomic_test.cpp.o
+src/construct.cpp.o:
+	$(MAKE) -f CMakeFiles/construct.dir/build.make CMakeFiles/construct.dir/src/construct.cpp.o
+.PHONY : src/construct.cpp.o
 
-src/atomic_test.i: src/atomic_test.cpp.i
+src/construct.i: src/construct.cpp.i
 
-.PHONY : src/atomic_test.i
+.PHONY : src/construct.i
 
 # target to preprocess a source file
-src/atomic_test.cpp.i:
-	$(MAKE) -f CMakeFiles/atomic_test.dir/build.make CMakeFiles/atomic_test.dir/src/atomic_test.cpp.i
-.PHONY : src/atomic_test.cpp.i
+src/construct.cpp.i:
+	$(MAKE) -f CMakeFiles/construct.dir/build.make CMakeFiles/construct.dir/src/construct.cpp.i
+.PHONY : src/construct.cpp.i
 
-src/atomic_test.s: src/atomic_test.cpp.s
+src/construct.s: src/construct.cpp.s
 
-.PHONY : src/atomic_test.s
+.PHONY : src/construct.s
 
 # target to generate assembly for a file
-src/atomic_test.cpp.s:
-	$(MAKE) -f CMakeFiles/atomic_test.dir/build.make CMakeFiles/atomic_test.dir/src/atomic_test.cpp.s
-.PHONY : src/atomic_test.cpp.s
+src/construct.cpp.s:
+	$(MAKE) -f CMakeFiles/construct.dir/build.make CMakeFiles/construct.dir/src/construct.cpp.s
+.PHONY : src/construct.cpp.s
 
 src/read.o: src/read.cpp.o
 
@@ -296,32 +338,86 @@ src/read.cpp.s:
 	$(MAKE) -f CMakeFiles/read.dir/build.make CMakeFiles/read.dir/src/read.cpp.s
 .PHONY : src/read.cpp.s
 
-src/share_memory.o: src/share_memory.cpp.o
+src/share_memory_atomic.o: src/share_memory_atomic.cpp.o
 
-.PHONY : src/share_memory.o
+.PHONY : src/share_memory_atomic.o
 
 # target to build an object file
-src/share_memory.cpp.o:
-	$(MAKE) -f CMakeFiles/share_memory.dir/build.make CMakeFiles/share_memory.dir/src/share_memory.cpp.o
-.PHONY : src/share_memory.cpp.o
+src/share_memory_atomic.cpp.o:
+	$(MAKE) -f CMakeFiles/share_memory.dir/build.make CMakeFiles/share_memory.dir/src/share_memory_atomic.cpp.o
+.PHONY : src/share_memory_atomic.cpp.o
 
-src/share_memory.i: src/share_memory.cpp.i
+src/share_memory_atomic.i: src/share_memory_atomic.cpp.i
 
-.PHONY : src/share_memory.i
+.PHONY : src/share_memory_atomic.i
 
 # target to preprocess a source file
-src/share_memory.cpp.i:
-	$(MAKE) -f CMakeFiles/share_memory.dir/build.make CMakeFiles/share_memory.dir/src/share_memory.cpp.i
-.PHONY : src/share_memory.cpp.i
+src/share_memory_atomic.cpp.i:
+	$(MAKE) -f CMakeFiles/share_memory.dir/build.make CMakeFiles/share_memory.dir/src/share_memory_atomic.cpp.i
+.PHONY : src/share_memory_atomic.cpp.i
 
-src/share_memory.s: src/share_memory.cpp.s
+src/share_memory_atomic.s: src/share_memory_atomic.cpp.s
 
-.PHONY : src/share_memory.s
+.PHONY : src/share_memory_atomic.s
 
 # target to generate assembly for a file
-src/share_memory.cpp.s:
-	$(MAKE) -f CMakeFiles/share_memory.dir/build.make CMakeFiles/share_memory.dir/src/share_memory.cpp.s
-.PHONY : src/share_memory.cpp.s
+src/share_memory_atomic.cpp.s:
+	$(MAKE) -f CMakeFiles/share_memory.dir/build.make CMakeFiles/share_memory.dir/src/share_memory_atomic.cpp.s
+.PHONY : src/share_memory_atomic.cpp.s
+
+src/share_ptr.o: src/share_ptr.cpp.o
+
+.PHONY : src/share_ptr.o
+
+# target to build an object file
+src/share_ptr.cpp.o:
+	$(MAKE) -f CMakeFiles/share_ptr.dir/build.make CMakeFiles/share_ptr.dir/src/share_ptr.cpp.o
+.PHONY : src/share_ptr.cpp.o
+
+src/share_ptr.i: src/share_ptr.cpp.i
+
+.PHONY : src/share_ptr.i
+
+# target to preprocess a source file
+src/share_ptr.cpp.i:
+	$(MAKE) -f CMakeFiles/share_ptr.dir/build.make CMakeFiles/share_ptr.dir/src/share_ptr.cpp.i
+.PHONY : src/share_ptr.cpp.i
+
+src/share_ptr.s: src/share_ptr.cpp.s
+
+.PHONY : src/share_ptr.s
+
+# target to generate assembly for a file
+src/share_ptr.cpp.s:
+	$(MAKE) -f CMakeFiles/share_ptr.dir/build.make CMakeFiles/share_ptr.dir/src/share_ptr.cpp.s
+.PHONY : src/share_ptr.cpp.s
+
+src/test.o: src/test.cpp.o
+
+.PHONY : src/test.o
+
+# target to build an object file
+src/test.cpp.o:
+	$(MAKE) -f CMakeFiles/test.dir/build.make CMakeFiles/test.dir/src/test.cpp.o
+.PHONY : src/test.cpp.o
+
+src/test.i: src/test.cpp.i
+
+.PHONY : src/test.i
+
+# target to preprocess a source file
+src/test.cpp.i:
+	$(MAKE) -f CMakeFiles/test.dir/build.make CMakeFiles/test.dir/src/test.cpp.i
+.PHONY : src/test.cpp.i
+
+src/test.s: src/test.cpp.s
+
+.PHONY : src/test.s
+
+# target to generate assembly for a file
+src/test.cpp.s:
+	$(MAKE) -f CMakeFiles/test.dir/build.make CMakeFiles/test.dir/src/test.cpp.s
+.PHONY : src/test.cpp.s
 
 src/write.o: src/write.cpp.o
 
@@ -357,7 +453,10 @@ help:
 	@echo "... clean"
 	@echo "... depend"
 	@echo "... rebuild_cache"
+	@echo "... share_ptr"
+	@echo "... construct"
 	@echo "... edit_cache"
+	@echo "... test"
 	@echo "... allocator"
 	@echo "... atomic_test"
 	@echo "... share_memory"
@@ -370,15 +469,21 @@ help:
 	@echo "... src/atomic.o"
 	@echo "... src/atomic.i"
 	@echo "... src/atomic.s"
-	@echo "... src/atomic_test.o"
-	@echo "... src/atomic_test.i"
-	@echo "... src/atomic_test.s"
+	@echo "... src/construct.o"
+	@echo "... src/construct.i"
+	@echo "... src/construct.s"
 	@echo "... src/read.o"
 	@echo "... src/read.i"
 	@echo "... src/read.s"
-	@echo "... src/share_memory.o"
-	@echo "... src/share_memory.i"
-	@echo "... src/share_memory.s"
+	@echo "... src/share_memory_atomic.o"
+	@echo "... src/share_memory_atomic.i"
+	@echo "... src/share_memory_atomic.s"
+	@echo "... src/share_ptr.o"
+	@echo "... src/share_ptr.i"
+	@echo "... src/share_ptr.s"
+	@echo "... src/test.o"
+	@echo "... src/test.i"
+	@echo "... src/test.s"
 	@echo "... src/write.o"
 	@echo "... src/write.i"
 	@echo "... src/write.s"

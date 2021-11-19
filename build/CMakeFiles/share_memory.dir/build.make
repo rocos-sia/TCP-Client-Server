@@ -57,27 +57,27 @@ include CMakeFiles/share_memory.dir/progress.make
 # Include the compile flags for this target's objects.
 include CMakeFiles/share_memory.dir/flags.make
 
-CMakeFiles/share_memory.dir/src/share_memory.cpp.o: CMakeFiles/share_memory.dir/flags.make
-CMakeFiles/share_memory.dir/src/share_memory.cpp.o: ../src/share_memory.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/abc418/cpp_examples/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/share_memory.dir/src/share_memory.cpp.o"
-	/bin/x86_64-linux-gnu-g++-9  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/share_memory.dir/src/share_memory.cpp.o -c /home/abc418/cpp_examples/src/share_memory.cpp
+CMakeFiles/share_memory.dir/src/share_memory_atomic.cpp.o: CMakeFiles/share_memory.dir/flags.make
+CMakeFiles/share_memory.dir/src/share_memory_atomic.cpp.o: ../src/share_memory_atomic.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/abc418/cpp_examples/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/share_memory.dir/src/share_memory_atomic.cpp.o"
+	/bin/x86_64-linux-gnu-g++-9  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/share_memory.dir/src/share_memory_atomic.cpp.o -c /home/abc418/cpp_examples/src/share_memory_atomic.cpp
 
-CMakeFiles/share_memory.dir/src/share_memory.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/share_memory.dir/src/share_memory.cpp.i"
-	/bin/x86_64-linux-gnu-g++-9 $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/abc418/cpp_examples/src/share_memory.cpp > CMakeFiles/share_memory.dir/src/share_memory.cpp.i
+CMakeFiles/share_memory.dir/src/share_memory_atomic.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/share_memory.dir/src/share_memory_atomic.cpp.i"
+	/bin/x86_64-linux-gnu-g++-9 $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/abc418/cpp_examples/src/share_memory_atomic.cpp > CMakeFiles/share_memory.dir/src/share_memory_atomic.cpp.i
 
-CMakeFiles/share_memory.dir/src/share_memory.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/share_memory.dir/src/share_memory.cpp.s"
-	/bin/x86_64-linux-gnu-g++-9 $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/abc418/cpp_examples/src/share_memory.cpp -o CMakeFiles/share_memory.dir/src/share_memory.cpp.s
+CMakeFiles/share_memory.dir/src/share_memory_atomic.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/share_memory.dir/src/share_memory_atomic.cpp.s"
+	/bin/x86_64-linux-gnu-g++-9 $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/abc418/cpp_examples/src/share_memory_atomic.cpp -o CMakeFiles/share_memory.dir/src/share_memory_atomic.cpp.s
 
 # Object files for target share_memory
 share_memory_OBJECTS = \
-"CMakeFiles/share_memory.dir/src/share_memory.cpp.o"
+"CMakeFiles/share_memory.dir/src/share_memory_atomic.cpp.o"
 
 # External object files for target share_memory
 share_memory_EXTERNAL_OBJECTS =
 
-../bin/share_memory: CMakeFiles/share_memory.dir/src/share_memory.cpp.o
+../bin/share_memory: CMakeFiles/share_memory.dir/src/share_memory_atomic.cpp.o
 ../bin/share_memory: CMakeFiles/share_memory.dir/build.make
 ../bin/share_memory: /usr/lib/x86_64-linux-gnu/libboost_system.so.1.71.0
 ../bin/share_memory: CMakeFiles/share_memory.dir/link.txt

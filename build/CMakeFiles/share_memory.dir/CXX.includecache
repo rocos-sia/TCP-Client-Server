@@ -6,18 +6,26 @@
 
 #IncludeRegexTransform: 
 
-/home/abc418/cpp_examples/src/share_memory.cpp
+/home/abc418/cpp_examples/src/share_memory_atomic.cpp
+atomic
+-
+chrono
+-
 condition_variable
 -
 fcntl.h
 -
 iostream
 -
-mutex
+stdlib.h
+-
+string.h
 -
 sys/mman.h
 -
 sys/stat.h
+-
+sys/syscall.h
 -
 sys/types.h
 -

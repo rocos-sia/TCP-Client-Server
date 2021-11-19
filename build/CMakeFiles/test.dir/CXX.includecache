@@ -1,0 +1,20 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/abc418/cpp_examples/src/test.cpp
+cassert
+-
+cmath
+-
+iostream
+-
+vector
+-
+fstream
+-
+

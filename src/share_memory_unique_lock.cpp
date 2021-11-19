@@ -9,16 +9,16 @@
 #include <unistd.h>
 
 /**
- * @brief 总结 实现线程之间的共享内存读写
+ * @brief 总结 使用std::unique_lock和  std::condition_variable 混合 实现线程之间的共享内存读写
  * 
  */
 
-std::mutex mut;
-bool ready = false;
+std::mutex              mut;
+bool                    ready = false;
 std::condition_variable cond;
-char *data;
+char*                   data;
 
-void write_thread(const int &count)
+void write_thread(const int& count)
 {
     for (int i = 0; i < count; i++)
     {
@@ -33,7 +33,7 @@ void write_thread(const int &count)
     cond.notify_all();
 }
 
-void read_thread(const int &count)
+void read_thread(const int& count)
 {
     for (int i = 0; i < count; i++)
     {
@@ -45,10 +45,10 @@ void read_thread(const int &count)
     }
 }
 
-int main(int argc, char const *argv[])
+int main(int argc, char const* argv[])
 {
     clock_t startTime = clock();
-    data = (char *)mmap(NULL, 1024, PROT_READ | PROT_WRITE, MAP_SHARED | MAP_ANONYMOUS, -1, 0);
+    data              = (char*)mmap(NULL, 1024, PROT_READ | PROT_WRITE, MAP_SHARED | MAP_ANONYMOUS, -1, 0);
     if (!data)
     {
         printf("mmap failed\n");

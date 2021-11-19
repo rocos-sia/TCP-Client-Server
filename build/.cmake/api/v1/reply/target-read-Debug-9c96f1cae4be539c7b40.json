@@ -2,7 +2,7 @@
 	"artifacts" : 
 	[
 		{
-			"path" : "/home/abc418/cpp_examples/bin/allocator"
+			"path" : "/home/abc418/cpp_examples/bin/read"
 		}
 	],
 	"backtrace" : 1,
@@ -26,19 +26,19 @@
 			{
 				"command" : 0,
 				"file" : 0,
-				"line" : 43,
+				"line" : 22,
 				"parent" : 0
 			},
 			{
 				"command" : 1,
 				"file" : 0,
-				"line" : 44,
+				"line" : 23,
 				"parent" : 0
 			},
 			{
 				"command" : 2,
 				"file" : 0,
-				"line" : 12,
+				"line" : 13,
 				"parent" : 0
 			}
 		]
@@ -52,7 +52,7 @@
 					"fragment" : "-g  "
 				},
 				{
-					"fragment" : "-std=gnu++11"
+					"fragment" : "-std=gnu++2a"
 				}
 			],
 			"defines" : 
@@ -86,7 +86,7 @@
 			]
 		}
 	],
-	"id" : "allocator::@6890427a1f51a3e7e1df",
+	"id" : "read::@6890427a1f51a3e7e1df",
 	"link" : 
 	{
 		"commandFragments" : 
@@ -115,8 +115,8 @@
 		],
 		"language" : "CXX"
 	},
-	"name" : "allocator",
-	"nameOnDisk" : "allocator",
+	"name" : "read",
+	"nameOnDisk" : "read",
 	"paths" : 
 	{
 		"build" : ".",
@@ -137,7 +137,7 @@
 		{
 			"backtrace" : 1,
 			"compileGroupIndex" : 0,
-			"path" : "src/allocator.cpp",
+			"path" : "src/read.cpp",
 			"sourceGroupIndex" : 0
 		}
 	],

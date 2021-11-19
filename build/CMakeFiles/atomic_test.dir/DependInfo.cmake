@@ -4,7 +4,7 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
-  "/home/abc418/cpp_examples/src/atomic_test.cpp" "/home/abc418/cpp_examples/build/CMakeFiles/atomic_test.dir/src/atomic_test.cpp.o"
+  "/home/abc418/cpp_examples/src/atomic.cpp" "/home/abc418/cpp_examples/build/CMakeFiles/atomic_test.dir/src/atomic.cpp.o"
   )
 set(CMAKE_CXX_COMPILER_ID "GNU")
 
