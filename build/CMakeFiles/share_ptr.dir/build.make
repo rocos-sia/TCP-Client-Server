@@ -80,6 +80,8 @@ share_ptr_EXTERNAL_OBJECTS =
 ../bin/share_ptr: CMakeFiles/share_ptr.dir/src/share_ptr.cpp.o
 ../bin/share_ptr: CMakeFiles/share_ptr.dir/build.make
 ../bin/share_ptr: /usr/lib/x86_64-linux-gnu/libboost_system.so.1.71.0
+../bin/share_ptr: /usr/lib/x86_64-linux-gnu/libboost_thread.so.1.71.0
+../bin/share_ptr: /usr/lib/x86_64-linux-gnu/libboost_atomic.so.1.71.0
 ../bin/share_ptr: CMakeFiles/share_ptr.dir/link.txt
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/abc418/cpp_examples/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking CXX executable ../bin/share_ptr"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/share_ptr.dir/link.txt --verbose=$(VERBOSE)

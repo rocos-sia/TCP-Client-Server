@@ -6,31 +6,3 @@
 
 #IncludeRegexTransform: 
 
-/home/abc418/cpp_examples/src/atomic.cpp
-atomic
--
-chrono
--
-condition_variable
--
-fcntl.h
--
-iostream
--
-stdlib.h
--
-string.h
--
-sys/mman.h
--
-sys/stat.h
--
-sys/syscall.h
--
-sys/types.h
--
-thread
--
-unistd.h
--
-

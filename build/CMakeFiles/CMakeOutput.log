@@ -459,3 +459,31 @@ Parsed CXX implicit link information from above output:
   implicit fwks: []
 
 
+Determining if the include file pthread.h exists passed with the following output:
+Change Dir: /home/abc418/cpp_examples/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make cmTC_820f1/fast && /usr/bin/make -f CMakeFiles/cmTC_820f1.dir/build.make CMakeFiles/cmTC_820f1.dir/build
+make[1]: 进入目录“/home/abc418/cpp_examples/build/CMakeFiles/CMakeTmp”
+Building C object CMakeFiles/cmTC_820f1.dir/CheckIncludeFile.c.o
+/bin/x86_64-linux-gnu-gcc-9    -o CMakeFiles/cmTC_820f1.dir/CheckIncludeFile.c.o   -c /home/abc418/cpp_examples/build/CMakeFiles/CMakeTmp/CheckIncludeFile.c
+Linking C executable cmTC_820f1
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_820f1.dir/link.txt --verbose=1
+/bin/x86_64-linux-gnu-gcc-9      CMakeFiles/cmTC_820f1.dir/CheckIncludeFile.c.o  -o cmTC_820f1 
+make[1]: 离开目录“/home/abc418/cpp_examples/build/CMakeFiles/CMakeTmp”
+
+
+
+Determining if the function pthread_create exists in the pthread passed with the following output:
+Change Dir: /home/abc418/cpp_examples/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make cmTC_2b968/fast && /usr/bin/make -f CMakeFiles/cmTC_2b968.dir/build.make CMakeFiles/cmTC_2b968.dir/build
+make[1]: 进入目录“/home/abc418/cpp_examples/build/CMakeFiles/CMakeTmp”
+Building C object CMakeFiles/cmTC_2b968.dir/CheckFunctionExists.c.o
+/bin/x86_64-linux-gnu-gcc-9   -DCHECK_FUNCTION_EXISTS=pthread_create   -o CMakeFiles/cmTC_2b968.dir/CheckFunctionExists.c.o   -c /usr/share/cmake-3.16/Modules/CheckFunctionExists.c
+Linking C executable cmTC_2b968
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_2b968.dir/link.txt --verbose=1
+/bin/x86_64-linux-gnu-gcc-9  -DCHECK_FUNCTION_EXISTS=pthread_create    CMakeFiles/cmTC_2b968.dir/CheckFunctionExists.c.o  -o cmTC_2b968  -lpthread 
+make[1]: 离开目录“/home/abc418/cpp_examples/build/CMakeFiles/CMakeTmp”
+
+
+

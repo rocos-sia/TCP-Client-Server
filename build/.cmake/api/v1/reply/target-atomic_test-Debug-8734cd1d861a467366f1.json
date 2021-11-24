@@ -2,7 +2,7 @@
 	"artifacts" : 
 	[
 		{
-			"path" : "/home/abc418/cpp_examples/bin/construct"
+			"path" : "/home/abc418/cpp_examples/bin/atomic_test"
 		}
 	],
 	"backtrace" : 1,
@@ -11,8 +11,7 @@
 		"commands" : 
 		[
 			"add_executable",
-			"target_link_libraries",
-			"include_directories"
+			"target_link_libraries"
 		],
 		"files" : 
 		[
@@ -26,19 +25,13 @@
 			{
 				"command" : 0,
 				"file" : 0,
-				"line" : 57,
+				"line" : 30,
 				"parent" : 0
 			},
 			{
 				"command" : 1,
 				"file" : 0,
-				"line" : 58,
-				"parent" : 0
-			},
-			{
-				"command" : 2,
-				"file" : 0,
-				"line" : 13,
+				"line" : 32,
 				"parent" : 0
 			}
 		]
@@ -63,7 +56,15 @@
 				},
 				{
 					"backtrace" : 2,
+					"define" : "BOOST_ATOMIC_DYN_LINK"
+				},
+				{
+					"backtrace" : 2,
 					"define" : "BOOST_SYSTEM_DYN_LINK"
+				},
+				{
+					"backtrace" : 2,
+					"define" : "BOOST_THREAD_DYN_LINK"
 				}
 			],
 			"includes" : 
@@ -73,10 +74,6 @@
 				},
 				{
 					"path" : "/home/abc418/cpp_examples"
-				},
-				{
-					"backtrace" : 3,
-					"path" : "/home/abc418/cpp_examples/include"
 				}
 			],
 			"language" : "CXX",
@@ -86,7 +83,7 @@
 			]
 		}
 	],
-	"id" : "construct::@6890427a1f51a3e7e1df",
+	"id" : "atomic_test::@6890427a1f51a3e7e1df",
 	"link" : 
 	{
 		"commandFragments" : 
@@ -105,18 +102,35 @@
 				"role" : "libraries"
 			},
 			{
+				"backtrace" : 2,
+				"fragment" : "/usr/lib/x86_64-linux-gnu/libboost_thread.so.1.71.0",
+				"role" : "libraries"
+			},
+			{
 				"fragment" : "-lpthread",
 				"role" : "libraries"
 			},
 			{
 				"fragment" : "-lrt",
 				"role" : "libraries"
+			},
+			{
+				"fragment" : "-lm",
+				"role" : "libraries"
+			},
+			{
+				"fragment" : "/usr/lib/x86_64-linux-gnu/libboost_atomic.so.1.71.0",
+				"role" : "libraries"
+			},
+			{
+				"fragment" : "-lpthread",
+				"role" : "libraries"
 			}
 		],
 		"language" : "CXX"
 	},
-	"name" : "construct",
-	"nameOnDisk" : "construct",
+	"name" : "atomic_test",
+	"nameOnDisk" : "atomic_test",
 	"paths" : 
 	{
 		"build" : ".",
@@ -137,7 +151,7 @@
 		{
 			"backtrace" : 1,
 			"compileGroupIndex" : 0,
-			"path" : "src/construct.cpp",
+			"path" : "src/atomic.cpp",
 			"sourceGroupIndex" : 0
 		}
 	],

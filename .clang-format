@@ -9,7 +9,7 @@ AlignAfterOpenBracket:	Align
 # 连续赋值时，对齐所有等号
 AlignConsecutiveAssignments:	true
 # 连续声明时，对齐所有声明的变量名
-AlignConsecutiveDeclarations:	true
+AlignConsecutiveDeclarations:	false
  
 AlignEscapedNewlines: Right
  
@@ -136,7 +136,7 @@ MacroBlockEnd:	''
 # 连续空行的最大数量
 MaxEmptyLinesToKeep:	1
 # 命名空间的缩进: None, Inner(缩进嵌套的命名空间中的内容), All
-NamespaceIndentation:	Inner
+NamespaceIndentation:	All
 # 使用ObjC块时缩进宽度
 ObjCBlockIndentWidth:	4
 # 在ObjC的@property后添加一个空格

@@ -80,6 +80,8 @@ share_memory_EXTERNAL_OBJECTS =
 ../bin/share_memory: CMakeFiles/share_memory.dir/src/share_memory_atomic.cpp.o
 ../bin/share_memory: CMakeFiles/share_memory.dir/build.make
 ../bin/share_memory: /usr/lib/x86_64-linux-gnu/libboost_system.so.1.71.0
+../bin/share_memory: /usr/lib/x86_64-linux-gnu/libboost_thread.so.1.71.0
+../bin/share_memory: /usr/lib/x86_64-linux-gnu/libboost_atomic.so.1.71.0
 ../bin/share_memory: CMakeFiles/share_memory.dir/link.txt
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/abc418/cpp_examples/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking CXX executable ../bin/share_memory"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/share_memory.dir/link.txt --verbose=$(VERBOSE)

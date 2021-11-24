@@ -80,6 +80,8 @@ write_EXTERNAL_OBJECTS =
 ../bin/write: CMakeFiles/write.dir/src/write.cpp.o
 ../bin/write: CMakeFiles/write.dir/build.make
 ../bin/write: /usr/lib/x86_64-linux-gnu/libboost_system.so.1.71.0
+../bin/write: /usr/lib/x86_64-linux-gnu/libboost_thread.so.1.71.0
+../bin/write: /usr/lib/x86_64-linux-gnu/libboost_atomic.so.1.71.0
 ../bin/write: CMakeFiles/write.dir/link.txt
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/abc418/cpp_examples/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking CXX executable ../bin/write"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/write.dir/link.txt --verbose=$(VERBOSE)

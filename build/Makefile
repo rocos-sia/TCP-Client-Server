@@ -111,6 +111,19 @@ depend:
 .PHONY : depend
 
 #=============================================================================
+# Target rules for targets named TCP_client
+
+# Build rule for target.
+TCP_client: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 TCP_client
+.PHONY : TCP_client
+
+# fast build rule for target.
+TCP_client/fast:
+	$(MAKE) -f CMakeFiles/TCP_client.dir/build.make CMakeFiles/TCP_client.dir/build
+.PHONY : TCP_client/fast
+
+#=============================================================================
 # Target rules for targets named share_ptr
 
 # Build rule for target.
@@ -161,6 +174,19 @@ allocator: cmake_check_build_system
 allocator/fast:
 	$(MAKE) -f CMakeFiles/allocator.dir/build.make CMakeFiles/allocator.dir/build
 .PHONY : allocator/fast
+
+#=============================================================================
+# Target rules for targets named TCP_server
+
+# Build rule for target.
+TCP_server: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 TCP_server
+.PHONY : TCP_server
+
+# fast build rule for target.
+TCP_server/fast:
+	$(MAKE) -f CMakeFiles/TCP_server.dir/build.make CMakeFiles/TCP_server.dir/build
+.PHONY : TCP_server/fast
 
 #=============================================================================
 # Target rules for targets named atomic_test
@@ -226,6 +252,60 @@ write: cmake_check_build_system
 write/fast:
 	$(MAKE) -f CMakeFiles/write.dir/build.make CMakeFiles/write.dir/build
 .PHONY : write/fast
+
+src/TCP_client.o: src/TCP_client.cpp.o
+
+.PHONY : src/TCP_client.o
+
+# target to build an object file
+src/TCP_client.cpp.o:
+	$(MAKE) -f CMakeFiles/TCP_client.dir/build.make CMakeFiles/TCP_client.dir/src/TCP_client.cpp.o
+.PHONY : src/TCP_client.cpp.o
+
+src/TCP_client.i: src/TCP_client.cpp.i
+
+.PHONY : src/TCP_client.i
+
+# target to preprocess a source file
+src/TCP_client.cpp.i:
+	$(MAKE) -f CMakeFiles/TCP_client.dir/build.make CMakeFiles/TCP_client.dir/src/TCP_client.cpp.i
+.PHONY : src/TCP_client.cpp.i
+
+src/TCP_client.s: src/TCP_client.cpp.s
+
+.PHONY : src/TCP_client.s
+
+# target to generate assembly for a file
+src/TCP_client.cpp.s:
+	$(MAKE) -f CMakeFiles/TCP_client.dir/build.make CMakeFiles/TCP_client.dir/src/TCP_client.cpp.s
+.PHONY : src/TCP_client.cpp.s
+
+src/TCP_server.o: src/TCP_server.cpp.o
+
+.PHONY : src/TCP_server.o
+
+# target to build an object file
+src/TCP_server.cpp.o:
+	$(MAKE) -f CMakeFiles/TCP_server.dir/build.make CMakeFiles/TCP_server.dir/src/TCP_server.cpp.o
+.PHONY : src/TCP_server.cpp.o
+
+src/TCP_server.i: src/TCP_server.cpp.i
+
+.PHONY : src/TCP_server.i
+
+# target to preprocess a source file
+src/TCP_server.cpp.i:
+	$(MAKE) -f CMakeFiles/TCP_server.dir/build.make CMakeFiles/TCP_server.dir/src/TCP_server.cpp.i
+.PHONY : src/TCP_server.cpp.i
+
+src/TCP_server.s: src/TCP_server.cpp.s
+
+.PHONY : src/TCP_server.s
+
+# target to generate assembly for a file
+src/TCP_server.cpp.s:
+	$(MAKE) -f CMakeFiles/TCP_server.dir/build.make CMakeFiles/TCP_server.dir/src/TCP_server.cpp.s
+.PHONY : src/TCP_server.cpp.s
 
 src/allocator.o: src/allocator.cpp.o
 
@@ -453,16 +533,24 @@ help:
 	@echo "... clean"
 	@echo "... depend"
 	@echo "... rebuild_cache"
+	@echo "... TCP_client"
 	@echo "... share_ptr"
 	@echo "... construct"
 	@echo "... edit_cache"
 	@echo "... test"
 	@echo "... allocator"
+	@echo "... TCP_server"
 	@echo "... atomic_test"
 	@echo "... share_memory"
 	@echo "... read"
 	@echo "... atomic"
 	@echo "... write"
+	@echo "... src/TCP_client.o"
+	@echo "... src/TCP_client.i"
+	@echo "... src/TCP_client.s"
+	@echo "... src/TCP_server.o"
+	@echo "... src/TCP_server.i"
+	@echo "... src/TCP_server.s"
 	@echo "... src/allocator.o"
 	@echo "... src/allocator.i"
 	@echo "... src/allocator.s"

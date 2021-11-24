@@ -6,21 +6,3 @@
 
 #IncludeRegexTransform: 
 
-/home/abc418/cpp_examples/src/write.cpp
-errno.h
--
-fcntl.h
--
-stdio.h
--
-string.h
--
-sys/mman.h
--
-sys/stat.h
--
-sys/types.h
--
-unistd.h
--
-

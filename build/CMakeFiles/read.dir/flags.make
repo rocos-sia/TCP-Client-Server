@@ -4,7 +4,7 @@
 # compile CXX with /bin/x86_64-linux-gnu-g++-9
 CXX_FLAGS = -g   -std=gnu++2a
 
-CXX_DEFINES = -DBOOST_ALL_NO_LIB -DBOOST_SYSTEM_DYN_LINK
+CXX_DEFINES = -DBOOST_ALL_NO_LIB -DBOOST_ATOMIC_DYN_LINK -DBOOST_SYSTEM_DYN_LINK -DBOOST_THREAD_DYN_LINK
 
-CXX_INCLUDES = -I/home/abc418/cpp_examples/build -I/home/abc418/cpp_examples -I/home/abc418/cpp_examples/include 
+CXX_INCLUDES = -I/home/abc418/cpp_examples/build -I/home/abc418/cpp_examples 
 

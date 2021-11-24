@@ -7,60 +7,52 @@ set(CMAKE_INCLUDE_CURRENT_DIR ON)
 set(EXECUTABLE_OUTPUT_PATH  ${PROJECT_SOURCE_DIR}/bin)
 
 
-find_package(Boost REQUIRED COMPONENTS system)
-message("----------------------")
-message(${Boost_DIR})
-include_directories(${PROJECT_SOURCE_DIR}/include)
+find_package(Boost REQUIRED COMPONENTS system thread)
 
-aux_source_directory(${PROJECT_SOURCE_DIR}/src   SrcFiles)
 
 add_executable(write  src/write.cpp)
-target_link_libraries(write ${Boost_LIBRARIES})
-target_link_libraries(write pthread)
-target_link_libraries(write rt)
+target_include_directories(write  PRIVATE  ${Boost_INCLUDE_DIRS})
+target_link_libraries(write   PRIVATE   ${Boost_LIBRARIES} pthread rt m  )
 
 add_executable(read  src/read.cpp)
-target_link_libraries(read ${Boost_LIBRARIES})
-target_link_libraries(read pthread)
-target_link_libraries(read rt)
-
+target_include_directories(read  PRIVATE  ${Boost_INCLUDE_DIRS})
+target_link_libraries(read   PRIVATE   ${Boost_LIBRARIES} pthread rt m  )
 
 add_executable(share_memory  src/share_memory_atomic.cpp)
-target_link_libraries(share_memory ${Boost_LIBRARIES})
-target_link_libraries(share_memory pthread)
-target_link_libraries(share_memory rt)
-
+target_include_directories(share_memory  PRIVATE  ${Boost_INCLUDE_DIRS})
+target_link_libraries(share_memory   PRIVATE   ${Boost_LIBRARIES} pthread rt m  )
 
 add_executable(atomic  src/atomic.cpp)
-target_link_libraries(atomic ${Boost_LIBRARIES})
-target_link_libraries(atomic pthread)
-target_link_libraries(atomic rt)
+target_include_directories(atomic  PRIVATE  ${Boost_INCLUDE_DIRS})
+target_link_libraries(atomic   PRIVATE   ${Boost_LIBRARIES} pthread rt m  )
+
 
 add_executable(atomic_test  src/atomic.cpp)
-target_link_libraries(atomic_test ${Boost_LIBRARIES})
-target_link_libraries(atomic_test pthread)
-target_link_libraries(atomic_test rt)
+target_include_directories(atomic_test  PRIVATE  ${Boost_INCLUDE_DIRS})
+target_link_libraries(atomic_test   PRIVATE   ${Boost_LIBRARIES} pthread rt m  )
 
 add_executable(allocator  src/allocator.cpp)
-target_link_libraries(allocator ${Boost_LIBRARIES})
-target_link_libraries(allocator pthread)
-target_link_libraries(allocator rt)
-
+target_include_directories(allocator  PRIVATE  ${Boost_INCLUDE_DIRS})
+target_link_libraries(allocator   PRIVATE   ${Boost_LIBRARIES} pthread rt m  )
 
 
 add_executable(test  src/test.cpp)
-target_link_libraries(test ${Boost_LIBRARIES})
-target_link_libraries(test pthread)
-target_link_libraries(test rt)
-
+target_include_directories(test  PRIVATE  ${Boost_INCLUDE_DIRS})
+target_link_libraries(test   PRIVATE   ${Boost_LIBRARIES} pthread rt m  )
 
 add_executable(construct  src/construct.cpp)
-target_link_libraries(construct ${Boost_LIBRARIES})
-target_link_libraries(construct pthread)
-target_link_libraries(construct rt)
-
+target_include_directories(construct  PRIVATE  ${Boost_INCLUDE_DIRS})
+target_link_libraries(construct   PRIVATE   ${Boost_LIBRARIES} pthread rt m  )
 
 add_executable(share_ptr  src/share_ptr.cpp)
-target_link_libraries(share_ptr ${Boost_LIBRARIES})
-target_link_libraries(share_ptr pthread)
-target_link_libraries(share_ptr rt)
+target_include_directories(share_ptr  PRIVATE  ${Boost_INCLUDE_DIRS})
+target_link_libraries(share_ptr   PRIVATE   ${Boost_LIBRARIES} pthread rt m  )
+
+add_executable(TCP_client  src/TCP_client.cpp)
+target_include_directories(TCP_client  PRIVATE  ${Boost_INCLUDE_DIRS})
+target_link_libraries(TCP_client   PRIVATE   ${Boost_LIBRARIES} pthread rt m  )
+
+
+add_executable(TCP_server  src/TCP_server.cpp)
+target_include_directories(TCP_server  PRIVATE  ${Boost_INCLUDE_DIRS})
+target_link_libraries(TCP_server   PRIVATE   ${Boost_LIBRARIES} pthread rt m  )

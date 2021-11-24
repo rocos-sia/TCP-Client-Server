@@ -80,6 +80,8 @@ atomic_EXTERNAL_OBJECTS =
 ../bin/atomic: CMakeFiles/atomic.dir/src/atomic.cpp.o
 ../bin/atomic: CMakeFiles/atomic.dir/build.make
 ../bin/atomic: /usr/lib/x86_64-linux-gnu/libboost_system.so.1.71.0
+../bin/atomic: /usr/lib/x86_64-linux-gnu/libboost_thread.so.1.71.0
+../bin/atomic: /usr/lib/x86_64-linux-gnu/libboost_atomic.so.1.71.0
 ../bin/atomic: CMakeFiles/atomic.dir/link.txt
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/abc418/cpp_examples/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking CXX executable ../bin/atomic"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/atomic.dir/link.txt --verbose=$(VERBOSE)
