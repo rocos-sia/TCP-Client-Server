@@ -33,7 +33,7 @@ int main( int argc, char** argv )
 
     memset( &servaddr, 0, sizeof( servaddr ) );  //清空
     servaddr.sin_family = AF_INET;
-    servaddr.sin_port   = htons( 12345 );
+    servaddr.sin_port   = htons( 6000 );
 
     if ( ( sockfd = socket( AF_INET, SOCK_STREAM, 0 ) ) < 0 )
     {
@@ -55,7 +55,7 @@ int main( int argc, char** argv )
 
     while ( 1 )
     {
-        sendline = std::to_string( count ) + std::string( "\n" );
+        sendline = std::to_string( count++ ) + std::string( "\n" );
         if ( send( sockfd, sendline.c_str( ), sendline.length( ), 0 ) < 0 )
         {
             printf( "send msg error: %s(errno: %d)\n", strerror( errno ), errno );
