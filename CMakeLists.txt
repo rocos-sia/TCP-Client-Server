@@ -56,3 +56,12 @@ target_link_libraries(TCP_client   PRIVATE   ${Boost_LIBRARIES} pthread rt m  )
 add_executable(TCP_server  src/TCP_server.cpp)
 target_include_directories(TCP_server  PRIVATE  ${Boost_INCLUDE_DIRS})
 target_link_libraries(TCP_server   PRIVATE   ${Boost_LIBRARIES} pthread rt m  )
+
+add_executable(share_ptr_as_class_member  src/share_ptr_as_class_member.cpp)
+target_include_directories(share_ptr_as_class_member  PRIVATE  ${Boost_INCLUDE_DIRS})
+target_link_libraries(share_ptr_as_class_member   PRIVATE   ${Boost_LIBRARIES} pthread rt m  )
+
+
+add_executable(class_construct_destruct  src/class_construct_destruct.cpp)
+target_include_directories(class_construct_destruct  PRIVATE  ${Boost_INCLUDE_DIRS})
+target_link_libraries(class_construct_destruct   PRIVATE   ${Boost_LIBRARIES} pthread rt m  )

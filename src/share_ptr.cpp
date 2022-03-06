@@ -19,13 +19,13 @@ int main()
 {
     //** std::make_share 构造函数等效传递 **//
     std::shared_ptr<Resource> ptr1 = std::make_shared<Resource>("123");
-    std::cout << "ptr1 . use_count" << ptr1.use_count() << std::endl;
+    std::cout << "ptr1 . use_count:" << ptr1.use_count() << std::endl;
     std::shared_ptr<Resource> ptr2(ptr1);
-    std::cout << "ptr1 . use_count" << ptr1.use_count() << std::endl;
+    std::cout << "ptr1 . use_count:" << ptr1.use_count() << std::endl;
     std::shared_ptr<Resource> ptr3(ptr2);
-    std::cout << "ptr1 . use_count" << ptr1.use_count() << std::endl;
+    std::cout << "ptr1 . use_count:" << ptr1.use_count() << std::endl;
     std::shared_ptr<Resource> ptr4(ptr1);
-    std::cout << "ptr4 . use_count" << ptr4.use_count() << std::endl;
+    std::cout << "ptr4 . use_count:v" << ptr4.use_count() << std::endl;
     std::cout << ptr1->str << std::endl;
     //总结 std::shared_ptr内部有一个共享控制块，所以 ptr4(ptr1) 或者ptr4(ptr2)都可以
     return 0;
