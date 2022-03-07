@@ -1,10 +1,9 @@
 #include <iostream>
-#include <memory>  // for std::shared_ptr
+#include <memory>  
 #include <unistd.h>
 
 /**
- * @brief 总结   多个std::shared_ptr可以管理同一个资源，当最后一个std::shared_ptr解除，资源释放。优点：提供一个独立的master来管理唯一资源，但可以同时有多个访问接口
-        //总结  std::make_shared可以创建一个内存，并返回  std::shared_ptr，优点：避免了两个独立的share_ptr（两个maser）指向同一个资源
+ * @brief 总结  可以放心得在类里使用share_ptr；在类析构时会同时调用类成员的析构；
  * 
  */
 
@@ -19,15 +18,18 @@ public:
 class father
 {
 public:
-    father( const std::shared_ptr< Resource > & ptr):ptr1(ptr) { std::cout << "father construct:" << std::endl; };
+    father( const std::shared_ptr< Resource > & p) : ptr(p) {  std::cout << "father construct:" <<std::endl; };
     ~father( ) { std::cout << "father destruct:" << std::endl; }
-    std::shared_ptr< Resource > ptr1;
+    std::shared_ptr< Resource > ptr;
 
 };
 
+
+
 int main( )
 {
-    father xx(std::make_shared<Resource>());
-    sleep( 2 );
+
+    father var( std::make_shared<Resource>());//通过这行，我发现编译器会自动把值传递优化成引用，不信可以father的构造函数改成值传递，然后
+    //打印shared_ptr的user_count,可以发现一直为1
     return 0;
 }
