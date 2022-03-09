@@ -7,7 +7,7 @@ set(CMAKE_INCLUDE_CURRENT_DIR ON)
 set(EXECUTABLE_OUTPUT_PATH  ${PROJECT_SOURCE_DIR}/bin)
 
 
-find_package(Boost REQUIRED COMPONENTS system thread)
+find_package(Boost REQUIRED COMPONENTS system thread chrono)
 
 
 add_executable(write  src/write.cpp)
@@ -65,3 +65,11 @@ target_link_libraries(share_ptr_as_class_member   PRIVATE   ${Boost_LIBRARIES} p
 add_executable(class_construct_destruct  src/class_construct_destruct.cpp)
 target_include_directories(class_construct_destruct  PRIVATE  ${Boost_INCLUDE_DIRS})
 target_link_libraries(class_construct_destruct   PRIVATE   ${Boost_LIBRARIES} pthread rt m  )
+
+add_executable(boost_thread_interrupt  src/boost_thread_interrupt.cpp)
+target_include_directories(boost_thread_interrupt  PRIVATE  ${Boost_INCLUDE_DIRS})
+target_link_libraries(boost_thread_interrupt   PRIVATE   ${Boost_LIBRARIES} pthread rt m  )
+
+add_executable(shared_ptr_reset  src/shared_ptr_reset.cpp)
+target_include_directories(shared_ptr_reset  PRIVATE  ${Boost_INCLUDE_DIRS})
+target_link_libraries(shared_ptr_reset   PRIVATE   ${Boost_LIBRARIES} pthread rt m  )
