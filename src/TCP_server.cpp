@@ -23,7 +23,7 @@
 
 #define MAXLINE 4096
 
-int TCP_con( std::shared_ptr< std::string > p_var, std::shared_ptr< std::string > recevie )
+int TCP_con( std::shared_ptr< std::string > p_var )
 {
     //** 变量初始化 **//
     int listenfd, connfd;
@@ -69,9 +69,9 @@ int TCP_con( std::shared_ptr< std::string > p_var, std::shared_ptr< std::string 
         //** 不断接受数据 **//
         n         = recv( connfd, buff, MAXLINE, 0 );
         buff[ n ] = '\0';
-        printf( "buff =%s", buff );
+        // printf( "buff =%s", buff );
         *p_var = std::string( buff );
-        if ( *recevie == "false" ) *recevie = std::string( "true" );
+      
         //**-------------------------------**//
     }
 
@@ -82,12 +82,12 @@ int TCP_con( std::shared_ptr< std::string > p_var, std::shared_ptr< std::string 
 int main( int argc, char** argv )
 {
     std::shared_ptr< std::string > P_str     = std::make_shared< std::string >( );
-    std::shared_ptr< std::string > P_recevie = std::make_shared< std::string >( "false" );
-    boost::thread( TCP_con, P_str, P_recevie ).detach( );
+
+    boost::thread( TCP_con, P_str ).detach( );
     while ( 1 )
     {
-        while ( *P_recevie == "false" ) { sleep( 0.1 ); }
+       sleep(1);
         std::cout << "str=" << *P_str;
-        *P_recevie = std::string( "false" );
+ 
     }
 }
