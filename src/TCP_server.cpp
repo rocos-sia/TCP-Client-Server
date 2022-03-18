@@ -9,21 +9,21 @@
  * 
  */
 
+#include <boost/thread.hpp>
+#include <errno.h>
+#include <iostream>
+#include <netinet/in.h>
 #include <stdio.h>
 #include <stdlib.h>
-#include <string>
 #include <string.h>
-#include <errno.h>
-#include <sys/types.h>
+#include <string>
 #include <sys/socket.h>
-#include <netinet/in.h>
+#include <sys/types.h>
 #include <unistd.h>
-#include <iostream>
-#include <boost/thread.hpp>
 
 #define MAXLINE 4096
 
-int TCP_con( std::shared_ptr< std::string > p_var )
+int TCP_con( std::shared_ptr< std::string > p_var, std::shared_ptr< std::string > do_receive )
 {
     //** 变量初始化 **//
     int listenfd, connfd;
@@ -64,14 +64,21 @@ int TCP_con( std::shared_ptr< std::string > p_var )
         printf( "accept socket error: %s(errno: %d)", strerror( errno ), errno );
     }
 
+    int count = 0;
+    char send_buf[ 100 ];
     while ( 1 )
     {
         //** 不断接受数据 **//
-        n         = recv( connfd, buff, MAXLINE, 0 );
-        buff[ n ] = '\0';
-        // printf( "buff =%s", buff );
-        *p_var = std::string( buff );
-      
+        n = recv( connfd, buff, MAXLINE, 0 );
+        if ( n > 0 )
+        {
+            buff[ n ]    = '\0';
+            *p_var       = std::string( buff );
+            *do_receive  = std::string( "true" );//告诉主线程，已收到消息
+            
+            sprintf( send_buf,"i am server at %d times", count++ );//反馈消息给客户端
+            int send_len = send( connfd, send_buf, strlen(send_buf), 0 );//反馈消息给客户端
+        }
         //**-------------------------------**//
     }
 
@@ -81,13 +88,17 @@ int TCP_con( std::shared_ptr< std::string > p_var )
 
 int main( int argc, char** argv )
 {
-    std::shared_ptr< std::string > P_str     = std::make_shared< std::string >( );
+    std::shared_ptr< std::string > P_str      = std::make_shared< std::string >( );
+    std::shared_ptr< std::string > do_receive = std::make_shared< std::string >( "false" );
 
-    boost::thread( TCP_con, P_str ).detach( );
+    boost::thread( TCP_con, P_str ,do_receive).detach( );
     while ( 1 )
     {
-       sleep(1);
-        std::cout << "str=" << *P_str;
- 
+        sleep( 1 );
+        if ( ( *do_receive ) == std::string{ "true" } )
+        {
+            std::cout << "Received=" << *P_str;
+            *do_receive = std::string( "false" );
+        }
     }
 }

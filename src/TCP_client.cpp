@@ -9,17 +9,17 @@
  * 
  */
 
+#include <arpa/inet.h>
+#include <errno.h>
+#include <iostream>
+#include <netinet/in.h>
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
-#include <errno.h>
-#include <sys/types.h>
-#include <sys/socket.h>
-#include <netinet/in.h>
-#include <arpa/inet.h>
-#include <unistd.h>
 #include <string>
-#include <iostream>
+#include <sys/socket.h>
+#include <sys/types.h>
+#include <unistd.h>
 
 #define MAXLINE 4096
 
@@ -32,18 +32,13 @@ int main( int argc, char** argv )
     int count = 0;
 
     memset( &servaddr, 0, sizeof( servaddr ) );  //清空
-    servaddr.sin_family = AF_INET;
-    servaddr.sin_port   = htons( 6000 );
+    servaddr.sin_family      = AF_INET;
+    servaddr.sin_port        = htons( 6000 );
+    servaddr.sin_addr.s_addr = inet_addr( "127.0.0.1" );  //服务器IP地址
 
     if ( ( sockfd = socket( AF_INET, SOCK_STREAM, 0 ) ) < 0 )
     {
         printf( "create socket error: %s(errno: %d)\n", strerror( errno ), errno );
-        return 0;
-    }
-
-    if ( inet_pton( AF_INET, "127.0.0.1", &servaddr.sin_addr ) <= 0 )
-    {
-        printf( "inet_pton error for %s\n", argv[ 1 ] );
         return 0;
     }
 
@@ -53,17 +48,32 @@ int main( int argc, char** argv )
         return 0;
     }
 
+    char recv_buf[ 1024 ];
+
     while ( 1 )
     {
-        sendline = std::to_string( count++ ) + std::string( "\n" );
+        //** 发送消息 **//
+        sendline = std::string( "i am client at " ) + std::to_string( count++ ) + std::string( "\n" );
         if ( send( sockfd, sendline.c_str( ), sendline.length( ), 0 ) < 0 )
         {
             printf( "send msg error: %s(errno: %d)\n", strerror( errno ), errno );
             return 0;
-        }  // 发送信息
-        std::cout << sendline << std::endl;
+        }
+        //**-------------------------------**//
+
+        //**接受消息 **//
+        int len = recv( sockfd, recv_buf, BUFSIZ, 0 );
+
+        if ( len > 0 )
+        {
+            recv_buf[ len ] = '\0';
+            std::cout << "Received=" << recv_buf << " ，Info Length=" << len << std::endl;
+        }
+        //**-------------------------------**//
+
         sleep( 1 );
     }
+
     close( sockfd );
     return 0;
 }
