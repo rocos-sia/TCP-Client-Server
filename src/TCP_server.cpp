@@ -1,7 +1,7 @@
 /**
  * @file TCP_server.cpp
  * @author JC 
- * @brief 这是一个TCP服务器例子，基于线程编程，启动后会等待客户端连接，每收到一帧数据就打印
+ * @brief 这是一个TCP服务器例子，基于线程编程，启动后会等待客户端连接，每收到一帧数据就返回数据“i am server at xxx”
  * @version 0.1
  * @date 2021-11-24
  * 

@@ -1,7 +1,7 @@
 /**
  * @file TCP_client.cpp
- * @author JC (you@domain.com)
- * @brief 这是个TCP客户端，效果是不断向服务器发送count值
+ * @author JC (193355797@qq.com)
+ * @brief 这是个TCP客户端，效果是不断向服务器发送 "i am client at xxx"
  * @version 0.1
  * @date 2021-11-24
  * 
